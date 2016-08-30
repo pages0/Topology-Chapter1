@@ -1,0 +1,6 @@
+# LaTeX cruft
+
+*.log
+*.aux
+*.out
+*.synctex.gz
