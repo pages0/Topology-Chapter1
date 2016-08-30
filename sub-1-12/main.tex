@@ -1,0 +1,89 @@
+\subsection{Different Differences}%1'12
+			\begin{minorEx}%1.10
+            Prove that for any two sets $A$ and $B$ their union $A \cup B$ is the union of the following three sets: $A \setminus B$, $B \setminus A$, and $A \cap B$, which are pairwise disjoint.
+            \begin{proof}Let $A$, $B$ and $C$ be arbitrary sets. For an arbitrary value $a$, $a \in A \cup B$ iff $a \in A$ or $a \in B$. This is equivalent to $a \in A \cup B$ iff one of the three following conditions are met; $a \in A$ and $a \not \in B$, $a \not \in A$ and $a \in B$, or $a \in A$ and $a \in B$. \newline $a \in A \setminus B$ iff $a \in A$ and $a \not \in B$, $a \in B \setminus A$ iff $a \not \in A$ and $a \in B$, and $a \in A \cap B$ iff $a \in A$ and $a \in B$. So $a$ is in the union of these sets iff it meets one of those criteria by the definition of union. These criteria are the same as those enumerated about for $A \cup B$. Since $a$ was arbitrary, these sets must be the same.
+            
+            \end{proof}
+            \end{minorEx}
+            \begin{minorEx} % 1.11
+            Prove that $A \setminus (A \setminus B) = A \cap B$ for any sets $A$ and $B$.
+            \begin{proof}
+            Let $x \in A \setminus (A \setminus B)$, by definition of set difference, we have $x \in A and x \not\in A \setminus B$. $x \not\in A \setminus B$ is the same as $x \in  (A \setminus B)^c$ which is equal to $B \cup A^c$. By distribution rule, $(A \cap (A^c \cup B)) = (A \cap A^c) \cup (A \cap B) = A \cap B$, so $x \in A \cap B$ and we have $A \setminus (A \setminus B) \subset A \cap B$. Since this process is reversible, we have $A \cap B  \subset A \setminus (A \setminus B)$, and we have: $$A \setminus (A \setminus B) = A \cap B$$
+            \end{proof}
+            \end{minorEx}
+
+            \begin{minorEx} % 1.12
+            Prove that $A \subset B$ if and only if $A \setminus B = \emptyset$.
+            \end{minorEx}
+            \begin{proof}
+            We have $A \subset B$ if and only if there does not exist an $x \in A$ with $x \notin B$; which holds if and only if it is not the case that $A \setminus B \ne \emptyset$, which holds if and only if $A \setminus B = \emptyset$.
+			\end{proof}
+            
+            \begin{minorEx}%1.13
+            Prove that $A\cap (B \setminus C) =A\cap B \setminus A\cap C$ for any sets A,B, and C.
+             \end{minorEx}
+   	\begin{proof}
+            We will show this by using double containment. 
+            Let $x\in (A \cap (B \setminus C )$ be arbitrary. 
+            We see that $x$ is in $A$, and in $B$, but not in $C$ and thus $x \in (A \cap B)$, and as $x$ is not in $C$, that $x\notin (A\cap C)$. We thus see that $x \in (A \cap B) \setminus (A \cap C)$.
+            We thus see that as $x$ is arbitrary, we know that $A\cap (B \setminus C) \subseteq A\cap B \setminus A\cap C$.
+            We now let $x \in (A \cap B) \setminus (A \cap C)$. 
+            We see because of this, that $x$ is in $A$ and $B$, but that $x$ is not in $A$ and $C$.We thus know that $x \in A$, and because $x$ is in $A$, and $x$ is in $B$, but $x$ is not in $A$ and $C$, that $x$ is not in $B$ and $C$, and thus $x\in (B\setminus C)$. We thus see that $x \in A \cap (B \setminus C)$
+            
+	\end{proof}
+    
+    \begin{minorEx}%1.14
+    Prove that for any sets $A$ and $B$ we have $$A \vartriangle B = (A \cup B) \setminus (A \cap B)$$
+    \begin{proof}
+    Let $A$ and $B$ be arbitrary sets. $A \vartriangle B$ denotes the set of values $a$ for which it is true either that $a \in A$ and $a \not \in B$ or $a \not \in A$ and $a \in B$. $(A \cup B) \setminus (A \cap B)$ denotes the set of values $b$ for which $b \in A \cup B$ and $b \not \in A \cap B)$. We then know $(A \cup B) \setminus (A \cap B)$ denotes the set of values $b$ for which $b \in A$ or $b \in B$ and $b \not \in A \cap B$. This is the same as the set of values $b$ for which $b$ belongs to exactly one of $A$ or $B$, i.e. the set of values for which it is true either that $b \in A$ and $b \not \in B$ or $b \not \in A$ and $b \in B$. We then have the exact same characterizations of $A \vartriangle b$ and $(A \cup B) \setminus (A \cap B)$, so the sets are the same.
+    \end{proof}
+    \end{minorEx}
+    
+    \begin{minorEx} % 1.15
+    [Associativity of Symmetric Difference.] Prove that for any sets $A, B$ and $C$ we have $$(A \vartriangle B) \vartriangle C = A \vartriangle (B \vartriangle C)$$
+    \end{minorEx}
+    \begin{proof}
+    To prove this equation we need to reinterpret the formula.
+    
+    LHS = 
+    \begin{align*}
+     & (A \vartriangle B) \vartriangle C \\
+    =& ((A \cup B) \setminus (A \cap B)) \cup C \setminus ((A \cup B) \setminus ((A \cap B)) \cap C) \\
+    =& A \cup B \cup C \setminus (A \cap B) \setminus (((A \cup B) \cap C) \setminus A \cap B \cap C) \\
+    =& A \cup B \cup C \setminus (A \cap B) \setminus (((A \cap C) \cup (B \cap C) \setminus A \cap B \cap C)\\
+    =& A \cup B \cup C \setminus ((A \cap B) \cup (A \cap C) \cup (B \cap C) \setminus A \cap B \cap C))\\
+    \end{align*}
+    
+    RHS:
+    \begin{align*}
+    =& (A \vartriangle (B \vartriangle C)\\
+    =& A \vartriangle (B \cup C \setminus B \cap C)\\
+    =& A \cup (B \cup C \setminus B \cap C) \setminus A \cap (B \cup C \setminus B \cap C)\\
+    =& (A \cup B \cup C \setminus B \cap C) \setminus (A \cap (B \cup C)) \setminus (A \cap B \cap C)\\
+    =& A \cup B \cup C \setminus (((B \cap C) \cup (A \cap B) \cup (A \cap C)) \setminus (A \cap B \cap C)) = LHS\\
+    \end{align*}
+    We have: $$(A \vartriangle B) \vartriangle C = A \vartriangle (B \vartriangle C)$$
+    \end{proof}
+    
+    \begin{minorEx}%1.16
+    Riddle. Find a symmetric definition of the symmetric difference $(A \vartriangle B) \vartriangle C$ of three sets and generalize it to arbitrary finite collections of sets.
+   	\end{minorEx}
+    \begin{proof}
+    We will start with the definition of symetric  difference for three sets. By the definition of symmetric difference of two sets, we can see that the symmetric difference between two sets is the result of removing their intersection from their union. We can then see that by iteratively applying this definition to a set C, that we have that all the elements of A, B, and C that don't belong another set are are included, that all the elements which belong to 2 sets are excluded, and all the elements which belong to both A, B, and C are included. From this, we can see that for 3 sets, the symmetric difference is composed of all elements which belong to an odd number of sets. By continuing to apply the symmetric diffence opperator, we would see that this remains to be the pattern, and thus the general pattern for the definition of symmetric difference will be the collection of elements of all sets which belong to an odd number of sets.
+    \end{proof}
+    \begin{minorEx}[Distributivity]%1.17
+    Prove that $(A \vartriangle B) \cap C = (A \cap C) \vartriangle (B \cap C)$ for any sets $A$,$B$ ,and $C$
+   	\end{minorEx}
+    \begin{proof}
+    Let $A$, $B$, and $C$ be arbitrary sets. We will show $(A \vartriangle B) \cap C = (A \cap C) \vartriangle (B \cap C)$ by double containment.
+    
+    We first let $x \in (A \vartriangle B) \cap C$ be arbitrary. We can see that $x\in C$ and $x\in (A \vartriangle B)$ by the properties of intersection. Because $x\in (A \vartriangle B)$, we know that $x \in A$ but $x \notin B$ or $x \in A$ but $x \notin B$. We thus know that $x\in C$ and $x\in A$, but $x\notin B$ or $x\in C$ and $x\in B$, but $x \notin A$. We can see that this is true if and only if $x \in (C \cap A) \setminus B \cup (C \cap B)\setminus A$, and thus $x \in (A \cap C) \vartriangle (B \cap C)$. As $x$ was arbitrary, we can see that $(A \vartriangle B) \cap C \subseteq (A \cap C) \vartriangle (B \cap C)$.
+    
+    We now let $x \in (A \cap C) \vartriangle (B \cap C)$ be arbitrary. We can see that $x \in (A \cap C)$, but $x\notin (B \cap C)$ or $x\in (B \cap C)$ but $x\notin (A \cap C)$. We thus can see that equivalently, $x \in A$ and $x\in C$ but $x\notin (B \cap C)$ or $x \in B$ and $x\in C$ but $x\notin (A \cap C)$. We can see that in every case that $x \in C$, and thus $x\in C$ and $x \in A$ but $x\notin B$, or $x \in B$ but $x\notin A$. We can see that this is equivilent to $x \in C \cap ((A\setminus B) \cup (B \setminus A ))$, and by the definition of symmetric difference, we can see that $x \in (A \vartriangle B) \cap C$. As $x$ was arbitrary, we can now see that $(A \vartriangle B) \cap C \supseteq (A \cap C) \vartriangle (B \cap C)$, and thus $(A \vartriangle B) \cap C = (A \cap C) \vartriangle (B \cap C)$
+    \end{proof}
+    \begin{minorEx}%1.18
+    Does the following inequality hold true for any sets $A$, $B$, and $C$? $$(A \vartriangle B) \cup C = (A \cup C) \vartriangle (B \cup C)$$
+    \begin{proof}
+    For any sets $A$, $B$, $C$ where $C \subset A \cup B$, $(A \vartriangle B) \cup C = (A \cup C) \vartriangle (B \cup C)$.
+    \end{proof}
+    \end{minorEx}

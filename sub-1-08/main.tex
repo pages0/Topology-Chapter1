@@ -1,0 +1,10 @@
+\subsection{To Prove Equality of Sets, Prove Two Inclusions}%1'8
+            	\begin{majorEx} % 1.E
+                	[Criterion of Equality for Sets.]
+                    $A = B$ if and only if $A \subset B$ and $B \subset A$.
+                \end{majorEx}
+                \begin{proof}
+					Let $A$ and $B$ be arbitrary sets. Let us first suppose that $A = B$. We show that $A \subset B$ and $B \subset A$. Let $x \in A$ be arbitrary. Since $A = B$, they have the same elements; since $x$ is an element of $A$, $x$ is an element of $B$. Hence, $A \subset B$. A similar argument establishes that $B \subset A$.
+                    
+                    We now establish the converse of the previous claim via contraposition. Suppose that it is not the case that $A \subset B$ and $B \subset A$; without loss of generality, we shall assume that $A \not\subset B$. Then there necessarily exists an element $x \in A$ satisfying $x \notin B$. As such, it is not the case that $A$ and $B$ contain the same elements, since $B$ does not contain $x$. Hence, $A \ne B$. By the contrapositive, this establishes the converse.
+				\end{proof}
