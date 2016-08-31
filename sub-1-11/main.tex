@@ -53,6 +53,7 @@ Primary author: David Kraemer.
     \cap A$, and $A \cup \emptyset$ each equal $A$ and $A \cup \emptyset =
     \emptyset$.
 \end{proof}
+Primary author: Willie Kaufman
 
 \begin{minorEx}%1.7
     Prove that for any sets $A$ and $B$ we have 
@@ -83,51 +84,17 @@ Primary author: David Kraemer.
     \cap B$. Since $A \cap B \subset A$, we have $$A \cap B = A$$
 \end{proof}            
 
-\begin{majorEx}%1.J
-    Associativity of $\cap$ and $\cup$. For any sets $A$, $B$, and $C$, we have
-    $$(A \cap B) \cap C = A \cap (B \cap C)$$  and $$(A \cup B) \cup C = A \cup
-    (B \cup C)$$
-\end{majorEx}
+  \begin{majorEx}%1.J
+            Associativity of $\cap$ and $\cup$. For any sets $A$, $B$,
+            and $C$, we have $$(A \cap B) \cap C = A \cap (B \cap C)$$
+            and $$(A \cup B) \cup C = A \cup (B \cup C)$$
+          \end{majorEx}
+            \begin{proof}
+            Let $A$, $B$, and $C$ be arbitrary sets. First, consider the associativity of $\cap$. In the case of intersection, if any of $A$, $B$, or $C$ are $\emptyset$, the top claim is true, as both evaluate to the emptyset. So consider the case where none of $A$, $B$, or $C$ are the emptyset. Choose an arbitrary element $a \in A \cup B \cup C$. Only elements in $A \cup B \cup C$ will be in the intersection of these sets, so we can ignore other elements; if the two sets we are considering contain exactly the same elements from these sets, they will be the same. $a \in (A \cap B) \cap C$ iff $a \in A \cap B$ and $a \in C$ by the definition of intersection. $a\in A \cap B$ iff $a \in A$ and $a \in B$ by the definition of intersection. Combining these logically, $a \in (A \cap B) \cap C$ iff it is an element of $A$, $B$, and $C$. Now considering the right side of the equation, $a \in A \cap (B \cap C)$ iff it is in both $A$ and $B \cap C$ by the definition of intersection. $a$ is in $B \cap C$ iff it is in $B$ and $C$ by the definition of intersection. Combining these logically, we have that $a \in A \cap (B \cap C)$ iff $a \in A$, $a \in B$ and $a \in C$. We know that $a \in (A \cap B) \cap C$ iff $a \in A$ and $a \in B$ and $a \in C$ iff $a \in A \cap (B \cap C)$, or $a \in (A \cap B) \cap C$ iff $a \in A \cap (B \cap C)$. Since $a$ was arbitrary, these sets must be the same. \newline
+            Second, consider the associativity of $\cup$. If all of $A$, $B$, and $C$ are $\emptyset$, both the left and right hand sides of the equation evaluate to $\emptyset$, and so the bottom claim is true. So consider the case where $A \cup B \cup C$ is nonempty. Choose an arbitrary element $a \in A \cup B \cup C$. Only elements in $A \cup B \cup C$ will be in the union of these sets, so we can ignore other elements; if the two sets we are considering contain exactly the same elements from these sets, they will be the same. $a \in (A \cup B) \cup C$ iff $a \in (A \cup B)$ or $a \in C$ by the definition of union. $a \in (A \cup B)$ iff $a \in A$ or $a \in B$ by the definition of union. Combining these logically, $a \in (A \cup B) \cup C$ iff $a \in A$, $a \in B$ or $a \in C$. Now consider the right hand side of the equation. $a \in A \cup (B \cup C)$ iff $a \in A$ or $a \in B \cup C$ by the definition of union.  $a \in B \cup C$ iff $a \in B$ or $a \in C$ by the definition of union. Combining these logically, $a \in A \cup (B \cup C)$ iff $a \in A$, $a \in B$, or $a \in C$. We know that $a \in (A \cup B) \cup C$ iff $a \in A$, $a \in B$, or $a \in C$ iff $a \in (A \cup B) \cup C$. Since $a$ was arbitrary, these sets must be the same.
+            \end{proof}
 
-\begin{proof}
-    Let $A$, $B$, and $C$ be arbitrary sets. First, consider the associativity
-    of $\cap$. In the case of intersection, if any of $A$, $B$, or $C$ are
-    $\emptyset$, the top claim is true, as both evaluate to the emptyset. So
-    consider the case where none of $A$, $B$, or $C$ are the emptyset. Choose an
-    arbitrary element $a \in A \cup B \cup C$. Only elements in $A \cup B \cup
-    C$ will be in the intersection of these sets, so we can ignore other
-    elements; if the two sets we are considering contain exactly the same
-    elements from these sets, they will be the same. $a \in (A \cap B) \cap C$
-    iff $a \in A \cap B$ and $a \in C$ by the definition of intersection. $a\in
-    A \cap B$ iff $a \in A$ and $a \in B$ by the definition of intersection.
-    Combining these logically, $a \in (A \cap B) \cap C$ iff it is an element of
-    $A$, $B$, and $C$. Now considering the right side of the equation, $a \in A
-    \cap (B \cap C)$ iff it is in both $A$ and $B \cap C$ by the definition of
-    intersection. $a$ is in $B \cap C$ iff it is in $B$ and $C$ by the
-    definition of intersection. Combining these logically, we have that $a \in A
-    \cap (B \cap C)$ iff $a \in A$, $a \in B$ and $a \in C$. We know that $a \in
-    (A \cap B) \cap C$ iff $a \in A$ and $a \in B$ and $a \in C$ iff $a \in A
-    \cap (B \cap C)$, or $a \in (A \cap B) \cap C$ iff $a \in A \cap (B \cap
-    C)$. Since $a$ was arbitrary, these sets must be the same.
-
-    Second, consider the associativity of $\cup$. If all of $A$, $B$, and $C$
-    are $\emptyset$, both the left and right hand sides of the equation evaluate
-    to $\emptyset$, and so the bottom claim is true. So consider the case where
-    $A \cup B \cup C$ is nonempty. Choose an arbitrary element $a \in A \cup B
-    \cup C$. Only elements in $A \cup B \cup C$ will be in the union of these
-    sets, so we can ignore other elements; if the two sets we are considering
-    contain exactly the same elements from these sets, they will be the same. $a
-    \in (A \cup B) \cup C$ iff $a \in (A \cup B)$ or $a \in C$ by the definition
-    of union. $a \in (A \cup B)$ iff $a \in A$ or $a \in B$ by the definition of
-    union. Combining these logically, $a \in (A \cup B) \cup C$ iff $a \in A$,
-    $a \in B$ or $a \in C$. Now consider the right hand side of the equation. $a
-    \in A \cup (B \cup C)$ iff $a \in A$ or $a \in B \cup C$ by the definition
-    of union.  $a \in B \cup C$ iff $a \in B$ or $a \in C$ by the definition of
-    union. Combining these logically, $a \in A \cup (B \cup C)$ iff $a \in A$,
-    $a \in B$, or $a \in C$. We know that $a \in (A \cup B) \cup C$ iff $a \in
-    A$, $a \in B$, or $a \in C$ iff $a \in (A \cup B) \cup C$. Since $a$ was
-    arbitrary, these sets must be the same.
-\end{proof}
+            Primary author: Willie Kaufman
 
 \begin{majorEx}%1.K
     The notions of intersection and union of an arbitrary collection of sets
@@ -305,7 +272,7 @@ Primary author: David Kraemer.
     and  } A \cup \bigcap_{B\in \Gamma} B = \bigcap_{B\in \Gamma} (A \cup B)
     $$
 \end{proof}
-
+Primary author: Reilly Noonan Grant
 
 \begin{majorEx}[Yet Another Pair of Distributivities]%1.N 
     Let $A$ be a set and let $\Gamma$ be a set consisting of sets, then we have
@@ -394,9 +361,11 @@ Primary author: David Kraemer.
         A \cup \bigcap_{B\in \Gamma} B \subseteq \bigcap_{B\in \Gamma} (A \cup B)
     $$
 
-    We now let $x \in \bigcap_{B\in \Gamma} (A \cup B)$ be arbitrary.  We see
-    that $x \in A$ or $x \in B$ for every $B \in \Gamma$.  Suppose $x \in A$. We
-    would then see that $x \in A \cup \bigcap_{B\in\Gamma} B$ as $x \in A$.
+    We now let $x \in \bigcap_{B\in \Gamma} (A \cup B)$ be arbitrary.
+    We can see
+    that $x \in A$ or $x \in B$ for every $B \in \Gamma$.  Suppose $x
+    \in A$. It would then be the case that $x \in A \cup
+    \bigcap_{B\in\Gamma} B$ as $x \in A$.
     Now, suppose that $x \notin A$ we would then have that $x \in
     \bigcap_{B\in\Gamma} B$ as $x \in \bigcap_{B\in\Gamma} (A \cap B)$, and $x
     \notin A$. We thus see that as $x$ was arbitrary, that 
@@ -415,3 +384,4 @@ Primary author: David Kraemer.
     $$
 
 \end{proof}
+Primary author: Reilly Noonan Grant
