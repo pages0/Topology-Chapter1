@@ -64,25 +64,20 @@ Primary author: Willie Kaufman
 \end{minorEx}
 
 \begin{proof}
-    We will prove this chain iff statement in two steps.
-
-    We first prove that $A \subset B \hspace{5pt} \text{\normalfont iff }
-    \hspace{5pt} A \cap B = A$ We prove the forward direction first.  Let $x \in
-    A$, since $A \subset B$, we know that $x \in B$ by definition of inclusion.
-    We have $x \in A$ and $x \in B$, so $x \in A \cap B$. Since $A \cap B
-    \subset A$. We have $$A \cap B = A$$ Backward direction: Let $x \in A$,
-    since $A \subset A \cap B$, we have $x \in A$ and $x \in B$. Hence, we have
-    $$A \subset B$$
-
-    Then we prove $A \cap B = A \hspace{5pt} \text{\normalfont iff }
-    \hspace{5pt} A \cup B = B$ Forward direction: Let $x \in A \cup B$, by
-    definition, we know $x \in A$ or $x \in B$. If $x \in A$, since $A \subset A
-    \cap B$, $x \in B$. Since $B \subset A \cup B$, we have: $$A \cup B = B$$
-
-    Backward direction: Let $x \in A$, since $A \cup B \subset B$, $x \in B$. We
-    have whenever $x \in A$, $x \in B$, so $x \in A \cap B$ and $A \subset A
-    \cap B$. Since $A \cap B \subset A$, we have $$A \cap B = A$$
-\end{proof}            
+            We will break this chain if and only if statement into two parts and then prove them separately.
+            
+            To begin with, we want to show that $A \subset B, $  if and only if $A \cap B = A$.
+            For if and only if statement, we need to prove it in both directions. For the forward direction, assume that $A \subset B$ and let $x \in A$, since $A \subset B$, we know that $x \in B$ by definition of inclusion. We have $x \in A$ and $x \in B$, so $x \in A \cap B$. Since $A \cap B \subset A$ by definition of intersection, we have $$A \cap B = A$$
+            Then, we consider the backward direction, assume that $A = A \cap B$ and let $x \in A$, since $A \subset A \cap B$, we have $x \in A$ and $x \in B$. Hence, we have $$A \subset B$$
+            
+            Now we want to prove the second if and only if statement which is $A \cap B = A \hspace{5pt} \text{\normalfont iff } \hspace{5pt} A \cup B = B.$ 
+            
+            We start with the forward. Assume that $A \cap B = A$ and let $x \in A \cup B$, by definition, we know $x \in A$ or $x \in B$. If $x \in A$, since $A \subset A \cap B$, $x \in B$. Since $B \subset A \cup B$, we have: $$A \cup B = B$$
+            
+            Backward direction:
+            Let $x \in A$, since $A \cup B \subset B$, $x \in B$. We have whenever $x \in A$, $x \in B$, so $x \in A \cap B$ and $A \subset A \cap B$. Since $A \cap B \subset A$, we have $$A \cap B = A$$
+            \end{proof} 
+                    Primary author: Jimin Tan
 
   \begin{majorEx}%1.J
             Associativity of $\cap$ and $\cup$. For any sets $A$, $B$,
@@ -107,25 +102,16 @@ Primary author: Willie Kaufman
 \end{majorEx}
 
 \begin{proof}
-
-    We will discuss the intersection of multiple sets first.
-
-    Let $x \in \bigcap_{C \in \Gamma}$, we have $x \in C_0 \cap C_1 \cdots \cap
-    C_n$ by definition. Since there are only two sets in $\Gamma$, which are $A,
-    B$, $x \in A \cap B$. We have $\bigcap_{C \in \Gamma} \subset A \cap B$. Let
-    $y \in A \cap B$. Since $A$ and $B$ are the only two elements in $\Gamma$,
-    we have $y \in \bigcap_{C \in \Gamma}$, and $A \cap B \subset \bigcap_{C \in
-    \Gamma}$. Then we have $$A \cap B = \bigcap_{C \in \Gamma}$$
-
-    Union:
-
-    Let $x \in \bigcup_{C \in \Gamma}$, we have $x \in C_0 \cup C_1 \cdots \cup
-    C_n$. Since $A$ and $B$ are the only two sets in $\Gamma$, we have $x \in A
-    \cup B$ and $\bigcup_{C \in \Gamma} \subset A \cup B$. Let $y \in A \cup B$,
-    since $A$ and $B$ are the only two sets in $\Gamma$, we have $y \in
-    \bigcup_{C \in \Gamma}$, and $A \cup B \subset \bigcup_{C \in \Gamma}$. Then
-    we have $$A \cup B = \bigcup_{C \in \Gamma}$$
-\end{proof}
+            
+            We will discuss the intersection of multiple sets first.
+            
+            Let $x \in \bigcap_{C \in \Gamma}$ and assume we can list all element like $C_0, C_1 \cdots, C_n \cdots$, we have $x \in C_0 \cap C_1 \cdots \cap C_n$ by definition. Since there are only two sets in $\Gamma$, which are $A, B$, $x \in A \cap B$. We have $\bigcap_{C \in \Gamma} \subset A \cap B$. Let $y \in A \cap B$. Since $A$ and $B$ are the only two elements in $\Gamma$, we have $y \in \bigcap_{C \in \Gamma}$, and $A \cap B \subset \bigcap_{C \in \Gamma}$. Then we have $$A \cap B = \bigcap_{C \in \Gamma}$$
+            
+            Union:
+            
+            Let $x \in \bigcup_{C \in \Gamma}$ and assume we can list all element like $C_0, C_1 \cdots, C_n \cdots$, we have $x \in C_0 \cup C_1 \cdots \cup C_n$. Since $A$ and $B$ are the only two sets in $\Gamma$, we have $x \in A \cup B$ and $\bigcup_{C \in \Gamma} \subset A \cup B$. Let $y \in A \cup B$, since $A$ and $B$ are the only two sets in $\Gamma$, we have $y \in \bigcup_{C \in \Gamma}$, and $A \cup B \subset \bigcup_{C \in \Gamma}$. Then we have $$A \cup B = \bigcup_{C \in \Gamma}$$
+            \end{proof}
+                    Primary author: Jimin Tan
 
 
 \begin{minorEx}%1.8
