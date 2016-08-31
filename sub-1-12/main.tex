@@ -9,8 +9,9 @@
             \begin{minorEx} % 1.11
             Prove that $A \setminus (A \setminus B) = A \cap B$ for any sets $A$ and $B$.
             \begin{proof}
-            Let $x \in A \setminus (A \setminus B)$, by definition of set difference, we have $x \in A and x \not\in A \setminus B$. $x \not\in A \setminus B$ is the same as $x \in  (A \setminus B)^c$ which is equal to $B \cup A^c$. By distribution rule, $(A \cap (A^c \cup B)) = (A \cap A^c) \cup (A \cap B) = A \cap B$, so $x \in A \cap B$ and we have $A \setminus (A \setminus B) \subset A \cap B$. Since this process is reversible, we have $A \cap B  \subset A \setminus (A \setminus B)$, and we have: $$A \setminus (A \setminus B) = A \cap B$$
+            Let $x \in A \setminus (A \setminus B)$, by definition of set difference, we have $x \in A \text{ and } x \not\in A \setminus B$. By basic set operation, $x \not\in A \setminus B$ is the same as $x \in  (A \setminus B)^c$ which is equal to $B \cup A^c$. By distribution rule, $(A \cap (A^c \cup B)) = (A \cap A^c) \cup (A \cap B) = A \cap B$, so $x \in A \cap B$ and we have $A \setminus (A \setminus B) \subset A \cap B$. Since this process is reversible, we have $A \cap B  \subset A \setminus (A \setminus B)$, and we have: $$A \setminus (A \setminus B) = A \cap B$$
             \end{proof}
+                    Primary author: Jimin Tan
             \end{minorEx}
 
             \begin{minorEx} % 1.12
@@ -65,6 +66,7 @@
     \end{align*}
     We have: $$(A \vartriangle B) \vartriangle C = A \vartriangle (B \vartriangle C)$$
     \end{proof}
+                    Primary author: Jimin Tan
     
     \begin{minorEx}%1.16
     Riddle. Find a symmetric definition of the symmetric difference $(A \vartriangle B) \vartriangle C$ of three sets and generalize it to arbitrary finite collections of sets.
