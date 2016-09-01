@@ -1,0 +1,86 @@
+\subsection{Simplest Examples}
+
+\begin{majorEx}
+    Check that the discrete topological space is a topological space, i.e., all
+    axioms of topological structure hold true.
+\end{majorEx}
+
+\begin{majorEx}
+    The indiscrete topological space is a topological structure, is it not?
+\end{majorEx}
+
+\begin{proof}
+    We show that the indiscrete topology $\Omega_I = \set{X, \emptyset}$ is
+    indeed a topological structure. We see immediately that $X \in \Omega_I$ and
+    $\emptyset \in \Omega_I$, so Axiom 3 is satisfied.
+
+    To see that $\Omega_I$ is closed under arbitrary unions, let $\Omega_I'
+    \subseteq \Omega_I$ be arbitrary. Then since $A \cup A = A$ and since 
+    \[
+        \bigcup_{A \in \Omega_I'} A
+    \]
+\end{proof}
+
+\begin{minorEx}
+    Let $X$ be the ray $[0, +\infty)$, and let $\Omega$ consist of $\emptyset$, %]
+    $X$, and all rays $(a, +\infty)$ with $a \geq 0$. Prove that $\Omega$ is
+    a topological space.
+\end{minorEx}
+
+\begin{minorEx}
+    Let $X$ be a plane. Let $\Sigma$ consist of $\emptyset$, $X$, and all open
+    disks centered at the origin. Is $\Sigma$ a topological structure?
+\end{minorEx}
+
+\begin{proof}[Answer---NEEDS FLESHING OUT]
+    Yes. We see immediately that Axiom 3 is satisfied, since $\emptyset, X \in
+    \Sigma$. In general, we will represent $D_r$ to indicate the open disk of
+    radius $r > 0$ centered at the origin.
+
+    To see that Axiom 1 holds, let $\Sigma' \subseteq \Sigma$ be arbitrary. To
+    proceed, we observe that $D_r \subseteq D_{r'}$ whenever $r \leq r'$ (and
+    equality holding exactly when $r = r'$). Let $f : \Sigma' \to \RR$ be
+    defined by $f(D_r) = r$, and consider $f(\Sigma')$. Either $f(\Sigma')$ is
+    bounded above, or it is unbounded. If it is bounded above, we have
+    \[
+        s = \sup f(\Sigma').
+    \]
+    In this case,
+    \[
+        \bigcup_{D_r \in \Sigma'} D_r = D_s \in \Sigma.
+    \]
+    Otherwise,
+    \[
+        \bigcup_{D_r \in \Sigma'} D_r = X \in \Sigma.
+    \]
+    In both cases, we see that the unions are elements of $\Sigma$.
+
+    To see that Axiom 2 holds, let $\Sigma' \subseteq \Sigma$ be an arbitrary
+    finite subset of $\Sigma$, and consider
+    \[
+        \bigcap_{D_r \in \Sigma'} D_r.
+    \]
+    Now, since $D_r \subseteq D_{r'}$ whenever $r \leq r'$, we have that $D_r
+    \cap D_{r'} = D_r$ whenever $ r \leq r'$. In this case, $f(\Sigma')$ is
+    finite, so by taking
+    \[
+        m = \min(f(\Sigma')),
+    \]
+    we have that
+    \[
+        \bigcap_{D_r \in \Sigma'} D_r = D_m.
+    \]
+\end{proof}
+
+\begin{minorEx}
+    Let $X$ consist of four elements: $X = \set{a, b, c, d}$. Which of the
+    following collections of its subsets are topological structures in $X$,
+    i.e., satisfy the axioms of topological structure:
+    \begin{enumerate}
+        \item $\emptyset, X, \set{a}, \set{b}, \set{a,c} \set{a,b,c},
+            \set{a,b}$;
+        \item $\emptyset, X, \set{a}, \set{b}, \set{a,b} \set{b,d}$;
+        \item $\emptyset, X, \set{a,c,d}, \set{b,c,d}$?
+    \end{enumerate}
+\end{minorEx}
+
