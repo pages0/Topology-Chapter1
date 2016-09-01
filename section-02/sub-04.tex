@@ -1,1 +1,62 @@
 \subsection{Additional Examples}
+
+\begin{minorEx} % 2.6
+    Let $(X, \Omega)$ be a topological space, $Y$ the set obtained from $X$ by
+    adding a single element $a$. Is
+    \[
+        \Omega' = \set{\set{a} \cup U : U \in \Omega} \cup \set{\emptyset}
+    \]
+    a topological structure in $Y$?
+\end{minorEx}
+
+\begin{proof}[Answer]
+    Yes. To see that Axiom 3 is satisfied, notice that since $X \in \Omega$,
+    $\set{a} \cup X \in \Omega'$. We also have that $\emptyset \in \Omega'$.
+    Thus, Axiom 3 holds.
+
+    A brief aside on the relationship of $\Omega$ and $\Omega'$. Let $f :
+    \Omega' \to \Omega$ be defined by $f(A) = A \setminus \set{a}$. We show that
+    $f$ is a bijection. To see that $f$ is onto, let $U \in \Omega$ be
+    arbitrary. Since $U \cup \set{a} \in \Omega'$ by definition, we have $f(U
+    \cup \set{a}) = U$. Since $U$ was arbitrary, we have that $f$ is onto. To
+    see that $f$ is one-to-one, consider the function $g : \Omega \to \Omega'$
+    defined by $g(U) = U \cup \set{a}$, which is well-defined. We have
+    \begin{align*}
+        (f \circ g)(U) &= f(U\cup \set{a}) \\
+                       &= U,
+    \end{align*}
+    while
+    \begin{align*}
+        (g \circ a)(A) &= g(A \setminus \set{a}) \\
+                       &= A,
+    \end{align*}
+    showing that $g = \inv{f}$, which establishes that $f$ is one-to-one. Thus,
+    $f$ is a bijection.
+
+    To see that Axiom 1 is satisfied, let $S \subseteq \Omega'$ be arbitrary,
+    and consider $\bigcup_{A \in S} A$.     
+    \begin{align*}
+        \bigcup_{A \in S} A &= \bigcup_{U \in f(S)} U \cup \set{a} \\
+                            &= \set{a} \cup \left( \bigcup_{U \in f(S)} U
+                            \right). 
+    \end{align*}
+    Since $\Omega$ is a topology, $\bigcup_{U \in f(S)} U = V$ for some $V \in
+    \Omega$, so
+    \[
+        \bigcup_{A \in S} A = \set{a} \cup V,
+    \]
+    which is by definition an element of $\Omega'$. This verifies Axiom 1.
+
+    To see that Axiom 2 is satisfied, let $S \subseteq \Omega'$ be an arbitrary
+    finite set. Then
+    \begin{align*}
+        \bigcap_{A \in S} A &= \bigcap_{U \in f(S)} U \cup \set{a} \\
+        &= \set{a} \cup \left( \bigcup_{U \in f(S)} U \right).
+    \end{align*}
+    Since $\Omega$ is a topology, there is a $V \in \Omega$ such that
+    \[
+        V = \bigcap_{U \in f(S)} U.
+    \]
+
+    
+\end{proof}
