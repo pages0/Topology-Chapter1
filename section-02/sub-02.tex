@@ -1,11 +1,48 @@
 \subsection{Simplest Examples}
 
-\begin{majorEx}
+\begin{majorEx} %2.A
     Check that the discrete topological space is a topological space, i.e., all
     axioms of topological structure hold true.
 \end{majorEx}
 
-\begin{majorEx}
+\begin{proof}
+  Let the discrete topological space be given by $(X, \Omega)$
+  We will first show that Axiom (1) holds true. Let $A$ be the union
+  of an arbitrary collection of sets in $\Omega$.  If $A = \Emptyset$, 
+  we know by 1.C, and the definition of the discrete topological space
+  that $A$ belongs to $\Omega$. Now suppose that $A$ is non 
+  empty. Let $a\in A$  be arbitrary. We see that because $a\in A$,
+  that by properties of a
+  union, that $a$ is in at least one set in $\Omega$, and every set in
+  $\Omega$ is a subset of $X$, we know that $a \in X$. As $a$ was
+  arbitrary, we see that $A \subset X$, and thus $A$ belongs to
+  $\Omega$. As $A$ was arbitrary, we know that Axiom (1) holds.
+  
+
+  We will now show that Axiom (2) holds true. Let $A$ be an arbitrary
+  intersection of a finite collection of sets that are elements of
+  $\Omega$. If $A = \Emptyset$, we know by 1.C that $A \subset X$ 
+  and the definition of the discrete topological space that $A$ 
+  belongs to $\Omega$. Now suppose that $A$ is non empty.
+  Let  $a\in A$ be arbitrary. We see by the definition of
+  intersection, and the definition of the discrete topological space
+  that $a$ is an element of a subset of $X$, and thus $a \in X$. As $a
+  \in X$, and $a$ was arbitrary, we see that $A \subset X$, and thus
+  $A$ belongs to $\Omega$. As $A$ was arbitrary, we know that
+  Axiom (2) holds.
+
+  By 1.B and 1.C we see that $\emptyset$ and $X$ are subsets of $X$,
+  and thus by the definition of the discrete topological space, we
+  have that $\emptyset$ and $X$ belong to $\Omega$, and thus Axiom (3)
+  holds true.
+
+  As all Axioms of topological structure hold true, we know 
+  that a discrete topological space is a topological space.
+\end{proof}
+
+Primary author: Reilly Noonan Grant
+
+\begin{majorEx} %2.B
     The indiscrete topological space is a topological structure, is it not?
 \end{majorEx}
 
@@ -21,13 +58,13 @@
     \]
 \end{proof}
 
-\begin{minorEx}
+\begin{minorEx} %2.1
     Let $X$ be the ray $[0, +\infty)$, and let $\Omega$ consist of $\emptyset$, %]
     $X$, and all rays $(a, +\infty)$ with $a \geq 0$. Prove that $\Omega$ is
     a topological space.
 \end{minorEx}
 
-\begin{minorEx}
+\begin{minorEx} %2.2
     Let $X$ be a plane. Let $\Sigma$ consist of $\emptyset$, $X$, and all open
     disks centered at the origin. Is $\Sigma$ a topological structure?
 \end{minorEx}
@@ -72,7 +109,7 @@
     \]
 \end{proof}
 
-\begin{minorEx}
+\begin{minorEx} %2.3
     Let $X$ consist of four elements: $X = \set{a, b, c, d}$. Which of the
     following collections of its subsets are topological structures in $X$,
     i.e., satisfy the axioms of topological structure:
@@ -83,4 +120,23 @@
         \item $\emptyset, X, \set{a,c,d}, \set{b,c,d}$?
     \end{enumerate}
 \end{minorEx}
+
+We see that (1) is a topological structure, however (2) and (3) both
+fail to satisfy the axioms of topological structure. For (1), we see
+that any union of the elements of the set is also included, and that
+any intersection of the elements is also included. Because $\emptyset$
+and $X$ are also in (1), we know that (1) satisfies the axioms of
+topological struture, and thus is a topological structure. 
+
+We see that $\{a,b\} \cup \{a,d\} = \{a,b,d\}$. As $\{a,b\}$ and
+$\{a,d\} $ belong to (2), but $\{a,b,d\}$ does not we see that (2) does not
+satisfy Axiom 1
+
+We see that $\{a,c,d\} \cap \{b,c,d\} =\{c,d\}$. As $\{a,c,d\}$
+and $\{b,c,d\}$ belong to (3), but $\{c,d\}$ does not, we know that 
+(3) does not satisfy Axiom 2
+
+
+Primary Author: Reilly Noonan Grant
+
 
