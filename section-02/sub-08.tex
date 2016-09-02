@@ -15,11 +15,58 @@
 
 \begin{minorEx} %2.11
   Prove that the half-open interval $[0,1)$  is neither open nor
-  closed, but is both a union of closed sets and an instersection of
+  closed, but is both a union of closed sets and an intersection of
   open sets.
 \end{minorEx}
 \begin{proof}
+  We will first show that $[0,1)$ is not open. By the definition of an
+  open set, we know that an open set is an arbitrary union of open
+  sets. We now consider $0$. We see
+  that as $0$ is in $[0,1)$, for $[0,1)$ to be open, there would have
+  to be an open set which contains it, however, if any set $(a,b)$
+  contains $0$, it would also contain the points less than $0$ and
+  greater than $a$, and $[0,1)$ does not contains these points. We
+  thus see that $[0,1)$ is not open. 
+  
+  We now will show that $[0,1)$ is
+  not closed. Consider the complement of
+  $[0,1)$, $(-\infty,0)\cup [1,\infty)$. We see that for this set to
+  be open, some open set would have to contain $1$, however, if any
+  open set $(a,b)$ contained $1$, then we would have that the points
+  less than $1$ and greater than $0$ would be in the set, and we know
+  that these points are not in the set, and thus $(-\infty,0)\cup
+  [1,\infty)$ is not open, and its complement is $[0,1)$ not closed.
+
+  We will now construct $[0,1)$ out of a union of closed
+  sets. Consider a set of the form $[0,x]$ where $x\in (0,1)$. We see
+  that its complement is $(-\infty,0) \cup (x,\infty)$ which is open,
+  and thus $[0,x]$ is closed. We also see that if we take the union of
+  every set of this form, that it will have all the same points as
+  $[0,1)$. We will now prove this. Let $A$ be the union of every set of
+  this form. Because for every $x$ $x<1$, we know that for any $x$ 
+  $[0,x] \subset [0,1)$, and thus for any $a \in A$, as $a\in [0,x]$
+  for some $x$, $a\in [0,1)$, and thus $A\subset [0,1)$. Now, let 
+  $b \in [0,1)$ be arbitrary. We see that if $b=0$, that $b\in A$, and
+  that if $b\neq 0$, that $b\in (0,1)$, and thus $[0,b]$ is a set in
+  $A$, and thus $b\in A$. As $b$ was arbitrary $A\supset [0,1)$. We
+  now see that by 1.E that $A = [0,1)$.
+
+  We will now construct $[0,1)$ out of an intersection of open
+  sets. Consider a set of the form $(-\frac{1}{n}, 1)$ where $n\in
+  \NN^{>0}$. Because both $-\frac{1}{n}$ and $1$ are real numbers, we know
+  that $(-\frac{1}{n}, 1)$ is an open set. We will call the
+  intersection of all sets of this form $B$. Let $a \in [0,1)$ be
+  arbitrary. We see that for any $n$, $a\geq 0> -\frac{1}{n}$, and
+  $a<1$, and thus $a\in B$, and $[0,1)\subset B$. Now let $b\in B$ be
+  arbitrary. Suppose $b <0$. We would then see that for some $n$, 
+  $b>-\frac{1}{n}>0$, and thus $b$ would not be in $B$. We thus can
+  see that $b\geq 0$. We also see that as $b\in (-1,1)$, that $b<1$.
+  We thus see that as $b\geq 0$ and $b<1$, that $b \in [0,1)$, and
+  thus as $b$ was arbitrary, $B\subset [0,1)$. We now can see that by
+  1.E $B=[0,1)$
 \end{proof}
+
+Primary author: Reilly Noonan Grant
 
 \begin{minorEx} %2.12
 \end{minorEx}

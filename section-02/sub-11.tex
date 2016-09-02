@@ -1,1 +1,39 @@
 \subsection{Open Sets on Line}
+\begin{majorEx}
+  Prove that every open subset of the real line is a union of disjoint
+  open intervals.
+\end{majorEx}
+
+\begin{proof}
+  We will show this by using proof by contradiction. We first notice
+  that by the definiton of the canonical topological space of the real
+  line, that open sets are arbitary unions of open intervals. We assume for
+  sake of contradiction that there exists an open subset $X$ of the real
+  line where it is neccesary for some collection of open intervals to intersect.
+  We will let $A$ be an arbitrary one of these intersections. Let
+  $c\in A$ be arbitrary, and let $B$ be the open interval $(a,b)$
+  where $a$ is chosen to be the real number closest to $c$ which satisfies
+  $a<c$, and $a\notin X$, or $-\infty$ if there is no such element,
+  and where $b$ is chosed to be the real number closest to $c$ which
+  satisfies $c<b$ and $b\notin X$, or $+\infty$ if there is no such
+  element. As $a$ and $b$ are the closest elements to $c$ which are
+  not in $X$, we know that $(a,b)\subset X$. We now can see that if
+  $A\subset (a,b)$ that every element in $A$ could have been covered
+  by one open set, and thus $A$ would not have been neccessary, and
+  every element of $X$ in $A$ could have been covered by one open
+  interval, and we would have a contradiction. We now see that as $A$
+  is the intersection of arbitrary unions of open sets, that $A$ is an
+  open interval, and thus has the form $(\alpha,\beta)$ from some
+  $\alpha,\beta \in \RR$. We can see that if $\alpha< a$, that $a\in
+  A$, and as $a\notin X$ we would see that $A$ is not a subset of $X$,
+  and thus $\alpha \geq a$. We similarly see that $\beta \leq b$. We
+  now pick an arbitrary element $d$ from $A$. As $d\in A$, we know
+  $\alpha < d < \beta$, and thus $a<d<b$. We thus see that $d\in
+  (a,b)$, and as $d$ was arbitrary, we have that $A\subset (a,b)$  and
+  thus have a contradiction, and know that there is no open subset of
+  the real line whiere it is neccesary for some collection of open
+  intervals to intersect, and thus  every open subset of the real line
+  can be described as a union of disjoint
+  open intervals.
+
+\end{proof}

@@ -10,3 +10,58 @@
   \setminus A) 
 \end{align}
 \end{majorEx}
+
+\begin{proof}
+  We will first show that 
+  $X \setminus \bigcup_{A \in \Gamma} A = \bigcap_{A\in\Gamma} (X
+  \setminus A)$
+  Let $x \in X \setminus \bigcup_{A \in\Gamma} A$ be arbitrary. We see
+  by definition of union, that $x\in X$ and $x \notin A$ for any $A
+  \in \Gamma$. We now can see that for any $A\in \Gamma$, $x \in (X \setminus A)$
+  as $x\in X$, and  $x \notin A$. Because for any $A\in \Gamma$
+  we know $x \in ( X \setminus A)$, we thus also know that 
+  $x\in \bigcap_{A\in\Gamma} (X \setminus A)$, and as $x$ was
+  arbitrary, we know that 
+  $X \setminus \bigcup_{A \in \Gamma} A \subset \bigcap_{A\in\Gamma} (X
+  \setminus A)$.
+
+  Now let $y \in \bigcap_{A\in\Gamma} (X \setminus A)$ be
+  arbitrary. We see that $y \in X$, and $y\notin A$ for each $A$. We
+  can now see that if it were true that $y\in \bigcup_{A\in\Gamma}$,
+  then for at least one $A\in \Gamma$, it would not be true that 
+  $y \in X$, and $y\notin A$ for each $A$, and thus  
+  $y\notin \bigcup_{A\in\Gamma}$. As it is also true that $y\in X$ we know
+  that $y \in (X \setminus \bigcup_{A\in \Gamma})$, and as $y$ was
+  arbitrary, we know that   
+  $X \setminus \bigcup_{A \in \Gamma} A \supset \bigcap_{A\in\Gamma} 
+  (X \setminus A)$. We can now see that by 1.E that 
+  $X \setminus \bigcup_{A \in \Gamma} A  = \bigcap_{A\in\Gamma} (X
+  \setminus A)$.
+
+We will now show that 
+$X \setminus \bigcap_{A \in \Gamma} A = \bigcup_{A\in\Gamma} (X
+\setminus A)$.
+Let $x \in X \setminus \bigcap_{A \in \Gamma} A$ be arbitrary. We see
+by definition of set difference and intersection that $x \in X$, and
+for some A $x\notin A$. We thus can see that for at least one $A$, $x\in
+(X \setminus A)$, and thus that 
+$x\in \bigcup_{A\in\Gamma} (X\setminus A)$. As $x$ was arbitrary, we
+see that $X \setminus \bigcap_{A \in \Gamma} A \subset \bigcup_{A\in\Gamma} (X
+\setminus A)$.
+
+Now let $y \in \bigcup_{A\in\Gamma} (X\setminus A)$ be arbitrary. We
+see that for some $A \in\Gamma$ $y \in X$ and $y\notin A$. Because
+$y\notin A$ we know that $y\notin \bigcap_{A\in\Gamma} A$, as by
+definition of intersection, if  $y\in \bigcap_{A\in\Gamma} A$ we would
+have that $y\in A$. We now see that as $y\in X$, and $y \notin
+\bigcap_{A\in\Gamma} A$ we know that $y \in X \setminus \bigcap_{A \in
+  \Gamma} A$. As $y$ was arbitrary, we know that  
+$X \setminus \bigcap_{A \in \Gamma} A \supset \bigcup_{A\in\Gamma} 
+(X\setminus A)$. We now can see by 1.E that  
+$X \setminus \bigcap_{A \in \Gamma} A = \bigcup_{A\in\Gamma}
+(X\setminus A)$.
+We thus know that 
+$$X \setminus \bigcup_{A \in \Gamma} A = \bigcap_{A\in\Gamma} (X \setminus A) $$
+and
+$$X \setminus \bigcap_{A \in \Gamma} A = \bigcup_{A\in\Gamma} (X \setminus A) $$
+\end{proof}
