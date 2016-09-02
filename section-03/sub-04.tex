@@ -1,1 +1,8 @@
 \subsection{Subbases}
+\begin{minorEx}%3.4
+Let $X$ be a set, $\vartriangle$ a collection of subsetsof $X$. Prove that $\vartriangle$ is a subbase for a topology on $X$ iff $X = \cup_{(W \in \vartriangle) W}$.
+\end{minorEx}
+\begin{proof}
+First, we prove that if $\vartriangle$ is a subbase for a topology on $X$, $X = \cup_{W \in \vartriangle) W}$. By the definition of topology, $X \in \Omega$, and so $X$ must be a subset of the union of any base of $\Omega$ by the definition of base. This implies each element of $X$ must be in at least 2 sets in $\vartriangle$. Since $\vartriangle$ is a collection of subsets of $X$, i.e. will not contain elements that $X$ does not, it follows that $X = \cup_{W \in \vartriangle} W$.
+Now we consider the other direction. Assume $X = \cup_{W \in \vartriangle) W}$ for some set $\vartriangle$. The collection of finite intersections of $\vartriangle$ is a set for the which union of all the elements equals $X$; this is obvious if we just consider the set of intersections of a single set in $\vartriangle$. Then we have that $\vartriangle$ is a subbase for the indiscrete topology on $X$; the only nonempty set is $X$, which we have assured ourselves is equal to the union of some number of finite intersections of sets in $\vartriangle$.
+\end{proof}

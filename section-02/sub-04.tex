@@ -5,7 +5,7 @@
   all infinte subsets of $\RR$. Is $\Omega$ a topological structure
 \end{minorEx}
 
-No, $\Omega$ is not a topology. Consider the sets $\{x | x \in [0, 1] or x = -3\}$ and $\{x | x \in [2, 3] or x = -3}$. The intersection of these two sets is simply {3}, which does not belong to $\Omega$, violating the definition of a topology.
+No, $\Omega$ is not a topology. Consider the sets $\{x | x \in [0, 1] or x = -3\}$ and $\{x | x \in [2, 3] or x = -3\}$. The intersection of these two sets is simply {3}, which does not belong to $\Omega$, violating the definition of a topology.
 
 
 \begin{minorEx} % 2.5
@@ -13,6 +13,11 @@ No, $\Omega$ is not a topology. Consider the sets $\{x | x \in [0, 1] or x = -3\
   complements of all finite subsets of $\RR$. Is $\Omega$ a topological structure?
 \end{minorEx}
 
+\begin{proof}
+We know that finite subsets of $\RR$ is a closed set, and the complement must be an open set. Since the union of any collection of open sets is still an open set that belongs to $\RR$, and the intersection of any finite collection of open sets is an open set that belongs to $\RR$. $\Omega$ also contains the empty set and $\RR$, so it is a topological structure on $X$.
+\end{proof}
+
+Primary Author: Jimin Tan
 
 \begin{minorEx} % 2.6
     Let $(X, \Omega)$ be a topological space, $Y$ the set obtained from $X$ by
@@ -95,9 +100,9 @@ The set $\{ \emptyset, \{ 0 \}, \{0,1\} \}$ a topological
 \end{minorEx}
 
 $\{\emptyset, \{0, 1\}\}
-{\emptyset, \{0\}, \{1\}, \{0, 1\}\}
-{\emptyset, \{1\}, \{0, 1\}\}
-{\emptyset, \{0\}, \{0, 1\}\}$
+\{\emptyset, \{0\}, \{1\}, \{0, 1\}\}
+\{\emptyset, \{1\}, \{0, 1\}\}
+\{\emptyset, \{0\}, \{0, 1\}\}$
 
 are all topologies.
 

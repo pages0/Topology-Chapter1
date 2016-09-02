@@ -1,4 +1,26 @@
 \subsection{Definition of Base}
+\begin{minorEx} %3.1
+Can two distinct topological structures have the same base?
+\end{minorEx}
+
+We claim that two distinct topological structures must have different bases.
+
+\begin{proof}
+Assume that two different topological structure $\Omega_1$ and $\Omega_2$ have the same base $S_b$. Every subset in $\Omega_1$ can be expressed as unions of elements in $S_b$ which will be in $\Omega_2$ by definition of topological structure. So we reach a conclusion that $\Omega_1$ is the same as $\Omega_2$ since they contain the same elements, a contradiction.
+\end{proof}
+
+Primary Author: Jimin Tan
+
+\begin{minorEx}[Riddle]%3.3
+  Prove that any base of the canonical topology on $\RR$ can be decreased
+\end{minorEx}
+\begin{proof}
+  Let $\Sigma$ be a base of the canonical topology on $\RR$. Let $A$ be an element of 
+  $\Sigma$. We see that $A$ is an open set, and thus an aritrary union of open intervals. If $A$ is the union of more than one open interval, we can separte these unions, and thus decrease the size of $A$, and we have show our case. We thus assume that $A$ is one open interval, defined by $(a,b)$. We now see that if $c$ is the mean of $a$ and $b$, and $d$ is the mean of $c$ and $a$, and $f$is the mean of $c$ and $b$, that $(a,f)$and 
+  $(d,b)$ are both smaller than $(a,b)$, but as $(a,f) \cup (d,b)$, we see that a base with $(a,f)$and 
+  $(d,b)$ would have all the same properties as a base with $A$.
+\end{proof}
+
 \begin{minorEx}[Riddle]%3.4
 What topological structures have exactly one base?
 \end{minorEx}
