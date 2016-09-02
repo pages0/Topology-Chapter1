@@ -1,1 +1,33 @@
 \subsection{When a Collection of Sets is a Base}
+\begin{majorEX}
+  A collection $\Sigma$ of open sets is a base for the topology iff for
+  every open set $U$ and every point $x\in U$  
+there is a set $V \in
+  \Sigma$ such that $x \in V \subset U$
+\end{majorEX}
+\begin{proof}
+We will first show that if $\Sigma$ is a base for the  topology if for
+every open set $U$ and every point $x \in U$ there is a set $V \in
+\Sigma$ such that $x \in V \subset U$. Let $U\in \Sigma$ be arbitrary
+and let $x\in U$ be arbitrary. By the definition of a basis, we know
+that because $U$ is an open set that $U$ is a union of sets in $\Sigma
+$. We know because $x \in U$ that for at least one of the sets in this
+union, $x$ will be in the set. We will call one of these sets $V$.
+We see that if $V$ had an
+element which was not in $U$, that the union of sets would not be
+equal to $U$, and as $x\in V$, we know that $V\subset U$. We thus have
+that because $U$ and $x$ were arbitrary, that the statement holds true
+in all cases.
+
+We will now show that if for every open set $U$ and every point $x\in U$  
+there is a set $V \in \Sigma$ such that $x \in V \subset U$ that
+$\Sigma$ is a base for the topology. Let $U$ be an arbitrary open
+set. We define $A$ to be the union of all $V$ that correspond to some
+point in $U$. We see that as for each $V$, $V \subset U$, we know that
+$A \subset U$, as if any element of $A$ were not in $U$, then for some
+set $V$, $V$ would not be a subset of $U$. We also see that $U\subset
+A$ as for each $x\in U$, we have that $x\in V$ for some $V$, and thus
+$x\in A$ by the definition of a union. We thus have that by 1.E that
+$A= U$, and as $U$ was arbitrary, we know that any $U$ can is a union
+of sets in $\Sigma$, and thus $\Sigma$ is a base for the topology.
+\begin{proof}
