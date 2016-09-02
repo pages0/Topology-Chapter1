@@ -1,1 +1,63 @@
 \subsection{Properties of Closed Sets}
+
+\begin{majorEx}
+    Prove that:
+    \begin{enumerate}
+        \item the intersection of any collection of closed sets is closed;
+        \item the union of any finite number of closed sets is closed;
+        \item the empty set and the whole space (i.e., the underlying set of the
+            topological structure) are closed.
+    \end{enumerate}
+\end{majorEx}
+
+\begin{proof}
+    Define $f : \mathcal{P}(X) \to \mathcal{P}(X)$ by $f(S) = X \setminus S$.
+    This function will be used throughout the proof.
+    \begin{enumerate}
+        \item Let $K \subset \mathcal{P}(X)$ be an arbitrary collection of
+            closed sets of $X$. Notice that for all $C \in K$, $X \setminus C$
+            is open, so $f(K) \subseteq \Omega$. We have, then, that
+            \[
+                \bigcap_{C \in K} C = \bigcap_{E \in f(K)} X \setminus E.
+            \]
+            By De Morgan's law (2.E.3), we have
+            \[
+                \bigcap_{E \in f(K)} X \setminus E = X \setminus
+                \bigcup_{E \in f(K)} E.
+            \]
+            As the arbitrary union of open sets is open, there is some $O \in
+            \Omega$ such that
+            \[
+                \bigcup_{E \in f(K)} E = O.
+            \]
+            Thus,
+            \[
+                \bigcap_{C \in K} C = X \setminus O,
+            \]
+            which is therefore closed.
+        \item Let $K \subset \mathcal{P}(X)$ be an arbitrary finite collection
+            of closed sets of $X$. Notice that for all $C \in K$, $X \setminus
+            C$ is open, so $f(K) \subseteq \Omega$. We have, then, that
+            \[
+                \bigcup_{C \in K} C = \bigcap_{E \in f(K)} X \setminus E.
+            \]
+            By De Morgan's law (2.E.4), we have
+            \[
+                \bigcup_{E \in f(K)} X \setminus E = X \setminus \bigcap_{E \in
+                f(K)} E.
+            \]
+            As the finite intersection of open sets is open, there is some $O
+            \in \Omega$ such that
+            \[
+                \bigcap_{E \in f(K)} E = O.
+            \]
+            Thus,
+            \[
+                \bigcup_{C \in K} C = X \setminus O,
+            \]
+            which is therefore closed.
+        \item Since $X \in \Omega$ by Axiom 3, $X$ is open; thus, $X \setminus X
+            = \emptyset$ is closed. Similarly, since $\emptyset \in \Omega$, $X
+            \setminus \emptyset = X$ is closed.
+    \end{enumerate}
+\end{proof}
