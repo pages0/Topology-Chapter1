@@ -1,1 +1,34 @@
 \subsection{Bases for Plane}
+
+\begin{minorEx}%3.7
+  Prove that each of the collections $\Sigma^2$,$\Sigma^\infty$, and
+  $\Sigma^1$ is a base for some topological structure in $\RR^2$, and
+  that the structures determined by these collections coincide
+\end{minorEx}
+\begin{proof}
+  We will first show that $\Sigma^2$ is a base for the topology of all
+  shapes in $\RR^2$ which don't include their boundries. Let $U$ be an
+  arbitrary element of this topology which is not the emptyset, and
+  let $x\in U$ be arbitrary. We now let $c$ be a point not in $U$ such
+  that the distance between $x$ and $c$ is as short as the shortest
+  distance between $x$ and any other point not in $U$. If no such
+  point exists, then $U$ contains every $x\in\RR^2$, and thus $U =
+  \RR^2$. We see in this case, that that as $\Sigma^2$ contains all open
+  discs, that the disk $V$ centered at $x$ with a radius of $1$ is in
+  $\Sigma^2$, and as $V\in \RR^2$, we know $V \in U$, and thus for
+  some $V\in \Sigma^2$  $x\in V \subset U$. We now suppose that $c$
+  exists. We see that as the distance is the shortest, that the disk
+  centered at $x$, $V$, with a radius equal to the distance between $c$ and
+  $x$ will be contained within $U$. Because $\Sigma^2$ contains all open
+  discs, we see that $V\in\Sigma^2$ and as it is centered at $x$, we
+  know that $x \in V$. We thus have that for some $V$, $x\in V \subset
+  U$. We now can see that as $x$ and $U$ were arbitrary, that by 3.A,
+  we know that $\Sigma^2$ is a base for the topology of all open
+  shapes in $\RR^2$. We can also see that if with each $V$ in the
+  above aproach we inscribe either an element of $\Sigma^1$ or
+  $\Sigma^\infty$ which would also contain $x$, and all be contained
+  within the open set. Thus by a similar argument, and 3.A, we know
+  that $\Sigma^1$ and $\Sigma^\infty$ are also bases for the topology of all open
+  shapes in $\RR^2$.
+
+\end{proof}

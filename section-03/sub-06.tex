@@ -1,7 +1,17 @@
 \subsection{Hierarchy of Topologies}
+\begin{minorEx}%3.11
+  Show that the $T_1-topology$ on the real line is coarser than the canonical topology.
+\end{minorEx}
+\begin{proof}
+  We first let $A$ be an arbitrary set in the $T_1-topology$. We will show that $A$ is in the canonical topology. Because $A$ is in the $T_1-topology$, we know that it is the complement of some finite set $\{a_1,\cdots,a_n\}$. We thus see that $A$ is of the form $(-\infty,a_1)\cup (a_1,a_2) \cup (a_2,a_3) \cdots \cup (a_n,\infty)$. By defintion of the cannonical topology, we know that any set $(a_n,a_{n+1})$ is in the cannonical topology, and as $(-\infty,a_1)$ and $ (a_n,\infty)$ are open intervals, we see that they are also in the cannonical topology. We thus see that as $A$ is a union of elements in the canonical topology, that it is in the canonical topology, and as $A$ was arbitrary, we see that the canonical topology is coarser than the complement topology.
+\end{proof}
+
 \begin{majorEx}
 3.D. Riddle. Formulate a necessary and sufficient condition for two bases
 to be equivalent without explicitly mentioning the topological structures
 determined by the bases.
 \end{majorEx}
 In order for two bases to describe the same topology, it must be that if an open set $O$ is the union of sets in $B_1$, it is also equal to the union of sets in $B_2$. WLOG, assume a set $A$ is equal to the union of some sets in $B_1$. For an arbitrary element $x \in A$, we must have a set $b \in B_2$ such that $b \subset A$ and $x \in b$ for an arbitrary $x$. In order to guarantee that this is the case without referring to $A$, for each set $b \in B_1$ and element $x \in b$, there exists a set $c \in B_2$ such that $c \subset b$ and $x \in c$, as well as this being the case in the other direction.
+
+
+
