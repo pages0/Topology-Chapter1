@@ -3,3 +3,11 @@
 \begin{majorEx} %2.C
   Check whether $\Omega$  satisfies the axioms of topological structure
 \end{majorEx}
+
+\begin{proof}
+$\RR$ and $\emptyset$ are both open sets, so they belong to the collection of sets $\Omega$. Then, we will prove the first two properties of topology. For the first property, we assume that there is a union of a collection $C$ with arbitrary $n$ sets, and we name them  $S_1, S_2, \cdots, S_n$. We can show that the union of two open set is still a open set. So we know that $S_1 \cup S_2$ is still open. Then if $S_i$ and $S_{i+1}$ are open sets, then $S_i + S_{i+1}$ is an open set. By induction we know that $$\bigcup_{S_i \in C} S_i \in \Omega$$
+Then, we prove the other property with induction. Let $C$ be a collection of arbitrary $n$ sets, and we label them $S_1, S_2, \cdots, S_n$. We can show that $S_1 \cap S_2 \in \Omega$, and we can also show that $S_i \cap S_{i+1} \in \Omega$. By induction we know that $$\bigcap_{S_i \in C} S_i \in \Omega$$
+So $\Omega$ satisfy the axioms of topological structure.
+\end{proof}
+
+Primary Author: Jimin Tan
