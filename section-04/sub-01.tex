@@ -1,0 +1,25 @@
+\subsection{Definition and First Examples}
+
+\begin{majorEx}
+  Prove that the function
+  \begin{center}
+  $\rho : X \times X \rightarrow \RR_+ : (x,y) \mapsto $
+  \[ \begin{cases} 
+    0 & \text{if } x=y \\
+    1 & \text{if } x \neq y 
+  \end{cases}
+  \]
+\end{center}
+is a metric for any set $X$
+\begin{proof}
+   We first see that as if $x=y$, then $\rho(x,y)$, and if $x\neq y$, that $\rho(x,y)=1\neq 0$, that we have that the first property of metrics holds.
+
+   We now see that as $x=y$ implies $y=x$, that if $x=y$, 
+   $\rho(x,y)=\rho(y,x)=0$, and if $x\neq y$, $\rho(x,y)=\rho(y,x)=1$, and thus the 
+   second property of metrics holds.
+
+   Finally, we have that as equality is a equivalence relation, that if $x=y$ , and $y=z$, 
+   that $x=z$, and thus $\rho(x,y) = \rho(x,z)+ \rho(z,y)=0$, and that otherwise, as $\rho(x,y)\geq 0$ for any $x,y$, we see that if $x\neq y$, that $\rho(x,y) \leq \rho(x,z)+ \rho(z,y)$   
+\end{proof}  
+  
+\end{majorEx}
