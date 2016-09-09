@@ -1,0 +1,87 @@
+\subsection{Ultrametrics and $p$-Adic Numbers}
+
+\begin{majorEx}
+    Check that only one metric in $4.A-4.2$ is an ultrametric. Which one?
+\end{majorEx}
+
+\begin{proof}[Answer]
+    The metric $4.A$ given by
+    \[
+        \rho(x,y) = 
+        \begin{cases}
+            0 & x = y \\
+            1 & x \ne y,
+        \end{cases}
+    \]
+    is an ultrametric. The rest are not. For example, in $\RR^2$ the points $x =
+    (0,0)$, $y = (3,0)$ and $z = (0, 4)$ have
+    \[
+        \rho(y,z) = 5 \geq \max\set{4, 3} = \max{\rho(x,z), \rho(x,y)}.
+    \]
+\end{proof}
+
+\begin{majorEx}
+    Prove that all triangles in an ultrametric space are isosceles (i.e., for
+    any three points $a,b,$ and $c$, at least two of the three distances
+    $\rho(a,b)$, $\rho(b,c)$, and $\rho(a, c)$ are equal).
+\end{majorEx}
+
+\begin{proof}
+    Suppose for the sake of contradiction that $\rho$ is an ultrametric and $a,
+    b, c$ do not form an isosceles triangle. Then without loss of generality,
+    assume that
+    \[
+        \rho(a,b) < \rho(a,c) < \rho(b,c).
+    \]
+    Then
+    \[
+        \rho(b,c) > \max\set{\rho(a,b), \rho(b,c)},
+    \]
+    contradicting the claim that $\rho$ is an ultrametric.
+\end{proof}
+
+\begin{majorEx}
+    Prove that spheres in an ultrametric space are not only closed (see Problem
+    4.23), but also open.
+\end{majorEx}
+
+\begin{proof}
+    Let $a \in X$, $r \in \RR_+$ be arbitrary and consider the sphere $S_r(a)$.
+    It suffices to show that for every $x \in S_r(a)$, there is a ball $B_{r'}
+    \subseteq S_r(a)$. 
+
+    Let $x \in S_r(a)$ be arbitrary, and choose $r' = \frac{r}{2}$. For any $y
+    \in B_{r'}(x)$, we have
+    \begin{align*}
+        \rho(a, y) &\leq \max \set{\rho(a, x), \rho(x, y} \\
+        &= \max \set{r, \frac{r}{2}} \\
+        &= r,
+    \end{align*}
+    and we have
+    \begin{align*}
+        \rho(a, x) \leq \max \set{\rho(a, y), \rho(x, y)} \\
+        r &\leq \max \set{\rho(a, y), \frac{r}{2}} \\
+        r &\leq \rho(a, y).
+    \end{align*}
+    Hence,
+    \[
+        r \leq \rho(a, y) \leq r,
+    \]
+    so $r = \rho(a, y)$. Thus, $y \in S_{r}(a)$, and the result follows.
+\end{proof}
+
+
+\begin{majorEx}
+    Prove that $\rho$ is an ultrametric.
+\end{majorEx}
+
+\begin{proof}
+    Let $x, y, z \in \QQ$ be arbitrary. There exist $r_i, s_i, \alpha_i \in \ZZ$
+    ($i = 1, 2, 3$) such that
+    \begin{align*}
+        x - y &= \frac{r_1}{s_1} p^{\alpha_1} \\
+        x - z &= \frac{r_2}{s_2} p^{\alpha_2} \\
+        y - z &= \frac{r_3}{s_3} p^{\alpha_3}.
+    \end{align*}
+
+\end{proof}<++>
