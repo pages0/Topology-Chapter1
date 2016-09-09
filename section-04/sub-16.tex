@@ -1,0 +1,40 @@
+\subsection{Ultrametrics and p-Adic Numbers}
+
+\begin{majorEx} 4.Rx
+  Check that only one metric in 4.A -4.2 is an ultra metric
+\end{majorEx}
+
+To do this, we must examine the following metrics
+
+4.A:
+$\rho: X\times X \rightarrow \RR_+: (x,y) \mapsto $
+\[ \begin{cases} 
+    0 & \text{if } x=y \\
+    1 & \text{if } x \neq y 
+  \end{cases}
+  \]
+
+4.B: $\RR \time \RR \rightarrow \RR_+ :(x,y) \mapsto |x-y|$
+
+4.C: $\RR^n \times \RR^n \rightarrow \RR_+ : (x,y) \mapsto \sqrt{\Sigma_{i=1}^n (x_i-y_i)^2}$
+
+4.1: $\RR^n \times \RR^n \rightarrow \RR_+ : (x,y) \mapsto max_{i=1,...,n}|x_i-y_i$ 
+
+4.2 $\RR^n \times \RR^n \rightarrow \RR_+ : (x,y) \mapsto \Sigma_{i=1}^n |x_i - y_i|$
+
+We will first show that $4.A$ is an ultrametric, and that all other metrics have a counter example.
+
+\begin{proof}
+  We assume for sake of contradiction that $4.A$ is not an ultra metric, and thus 
+  that for some $x,y,z$ $\rho(x,y) > max \{\rho(x,z) , \rho(z,y)\}$. We thus see 
+  that as there are only two possible values for $\rho$, that $\rho(x,y)=1$, and 
+  $max \{\rho(x,z) , \rho(z,y)\}=0$ and thus $\rho(z,y)=0$ and $\rho(x,z)=0$. 
+  However, we see that as $\rho(z,y)=0$, and $\rho(x,z)=0$ that by definition of 
+  the metric, that $z=y$, and $x=z$, and thus $x=y$, and by definitiion of $\rho$, we must have that $\rho(x,y)=0$. We thus have a contradiction, and we know that $4.A$ is an an ultra metric
+\end{proof}
+
+We now see that if $x=1,y=0, z=.5$, that $|x-y|= 1$, $|x-z|=0.5$ and $|z-y|=0.5$. and thus for the metric in $4.B$, there is some value of $x,y$ and $z$ such that
+$\rho(x,y) > max \{\rho(x,z) , \rho(z,y)\}$.
+
+
+
