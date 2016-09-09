@@ -59,7 +59,7 @@
     \end{align*}
     and we have
     \begin{align*}
-        \rho(a, x) \leq \max \set{\rho(a, y), \rho(x, y)} \\
+        \rho(a, x) &\leq \max \set{\rho(a, y), \rho(x, y)} \\
         r &\leq \max \set{\rho(a, y), \frac{r}{2}} \\
         r &\leq \rho(a, y).
     \end{align*}
@@ -83,5 +83,31 @@
         x - z &= \frac{r_2}{s_2} p^{\alpha_2} \\
         y - z &= \frac{r_3}{s_3} p^{\alpha_3}.
     \end{align*}
-
-\end{proof}<++>
+    Note that each $\alpha_i$ is unique to the particular difference.
+    Without loss of generality, assume $\alpha_2 \geq \alpha_1$. If $\alpha_1 =
+    \alpha_3$, we are done, because $\rho(x,z) \leq \max\set{\rho(x,y), \rho(y,z)}$,
+    the other inequalities following easily. We have
+    \begin{align*}
+        y - z &= (y - x) + (x - z) \\
+        \frac{r_3}{s_3}p^{\alpha_3} &= \frac{r_2}{s_2} p^{\alpha_2} -
+        \frac{r_1}{s_1} p^{\alpha_1} \\
+        \frac{r_3}{s_3}p^{\alpha_3} &= \left(\frac{r_2}{s_2} p^{\alpha_2 -
+        \alpha_1} - \frac{r_1}{s_1} \right) p^{\alpha_1} \\
+        \frac{r_3}{s_3}p^{\alpha_3} &= \left(\frac{r_2p^{\alpha_2 -
+        \alpha_1} - r_1}{s_1s_2} \right) p^{\alpha_1}.
+     \end{align*}
+     It now suffices to show that 
+     \[
+         \gcd \left(\frac{r_2p^{\alpha_2 - \alpha_1} - r_1}{s_1s_2},
+         p \right) = 1.
+     \]
+     To this end, notice that the denominator is coprime with $p$, since both
+     $s_1$ and $s_2$ are coprime with $p$. And notice that the numerator is
+     coprime with $p$, since $r_1$ is coprime with $p$. Hence, we can write
+     \[
+         \frac{r_3}{s_3}p^{\alpha_3} = \frac{r_4}{s_4} p^{\alpha_1}
+     \]
+     where $r_4 = r_2 p^{\alpha_2 - \alpha_1} - r_1$ and $s_4 = s_1 s_2$ are
+     coprime with $p$. This implies that $\alpha_1 = \alpha_3$, and the result
+     follows.
+\end{proof}
