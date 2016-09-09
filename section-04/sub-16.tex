@@ -1,6 +1,6 @@
-\subsection{Ultrametrics and p-Adic Numbers}
+\subsection{Ultrametrics and $p$-Adic Numbers}
 
-\begin{majorEx} 4.Rx
+\begin{majorEx}%4.Rx
   Check that only one metric in 4.A -4.2 is an ultra metric
 \end{majorEx}
 
@@ -14,7 +14,7 @@ $\rho: X\times X \rightarrow \RR_+: (x,y) \mapsto $
   \end{cases}
   \]
 
-4.B: $\RR \time \RR \rightarrow \RR_+ :(x,y) \mapsto |x-y|$
+4.B: $\RR \times \RR \rightarrow \RR_+ :(x,y) \mapsto |x-y|$
 
 4.C: $\RR^n \times \RR^n \rightarrow \RR_+ : (x,y) \mapsto \sqrt{\Sigma_{i=1}^n (x_i-y_i)^2}$
 
@@ -33,8 +33,113 @@ We will first show that $4.A$ is an ultrametric, and that all other metrics have
   the metric, that $z=y$, and $x=z$, and thus $x=y$, and by definitiion of $\rho$, we must have that $\rho(x,y)=0$. We thus have a contradiction, and we know that $4.A$ is an an ultra metric
 \end{proof}
 
-We now see that if $x=1,y=0, z=.5$, that $|x-y|= 1$, $|x-z|=0.5$ and $|z-y|=0.5$. and thus for the metric in $4.B$, there is some value of $x,y$ and $z$ such that
+We now see that if $x=1,y=0, z=.5$, that $|x-y|= 1$, $|x-z|=0.5$ and $|z-y|=0.5$, and thus for the metric in $4.B$, there is some value of $x,y$ and $z$ such that
 $\rho(x,y) > max \{\rho(x,z) , \rho(z,y)\}$.
 
+We also see that given the same values of $x,y$, and $z$ that
+$\sqrt{(x-y)^2}=1$, $\sqrt{(x-z)^2}= 0.5$ $\sqrt{(y-z)^2}= 0.5$, and
+thus for the metric in $4.C$, there is some value of $x,y$ and $z$ such that
+$\rho(x,y) > max \{\rho(x,z) , \rho(z,y)\}$.
+
+We also see that in the case of $n=1$, that 4.1 and 4.2 reduce to the
+cases above, and thus are not ultra metrics.
+
+\begin{majorEx}%4.Sx
+    Prove that all triangles in an ultrametric space are isosceles (i.e., for
+    any three points $a,b,$ and $c$, at least two of the three distances
+    $\rho(a,b)$, $\rho(b,c)$, and $\rho(a, c)$ are equal).
+\end{majorEx}
+
+\begin{proof}
+    Suppose for the sake of contradiction that $\rho$ is an ultrametric and $a
+    b, c$ do not form an isosceles triangle. Then without loss of
+    generality, we assume that
+    \[
+        \rho(a,b) < \rho(a,c) < \rho(b,c).
+    \]
+    We would then have that 
+    $\rho(b,c)>\rho(a,c) $, and $\rho(b,c)>\rho(a,b)$, and thus
+    $\rho(b,c)> max\{\rho(a,c), \rho(a,b)\}$. We thus have that
+    this contradicts that $\rho$ is an ultrametrics, and thus we have
+    that there is not a strict inequality on $\rho(a,b)$,$\rho(a,c)$,
+    and $\rho(b,c)$, and thus at least two of the three distances 
+    are equal.    
+\end{proof}
+
+\begin{majorEx}%4.Tx
+    Prove that spheres in an ultrametric space are not only closed (see Problem
+    4.23), but also open.
+\end{majorEx}
+
+\begin{proof}
+    Let $a \in X$, $r \in \RR_+$ be arbitrary and consider the sphere $S_r(a)$.
+    It suffices to show that for every $x \in S_r(a)$, there is a ball $B_{r'}(x)
+    \subseteq S_r(a)$. 
+
+    Let $x \in S_r(a)$ be arbitrary, and choose $r' = \frac{r}{2}$. We
+    also let $y\in B_{r'}(x)$be arbitrary. We see that we have
+    \begin{align*}
+        \rho(a, y) &\leq \max \set{\rho(a, x), \rho(x, y} \\
+        &= \max \set{r, \frac{r}{2}} \\
+        &= r,
+    \end{align*}
+    and we have
+    \begin{align*}
+        \rho(a, x) &\leq \max \set{\rho(a, y), \rho(x, y)} \\
+        r &\leq \max \set{\rho(a, y), \frac{r}{2}} \\
+        r &\leq \rho(a, y).
+    \end{align*}
+    Hence,
+    \[
+        r \leq \rho(a, y) \leq r,
+    \]
+    so $r = \rho(a, y)$. Thus, $y \in S_{r}(a)$, and as $y$ was
+    arbitrary, we have that $B_{r'}(x) \subseteq S_r(a)$. As $x$ was
+    arbitrary, we see that this is true for every $x \in S_r(a)$, and
+    thus as the union of open balls is an open set, we have as that every
+    element of $S_r(a)$ is contained in an open set that is a subset
+    of $S_r(a)$, that $S_r(a)$ is an open set.
+
+\end{proof}
 
 
+\begin{majorEx}
+    Prove that $\rho$ is an ultrametric.
+\end{majorEx}
+
+\begin{proof}
+    Let $x, y, z \in \QQ$ be arbitrary. There exist $r_i, s_i, \alpha_i \in \ZZ$
+    ($i = 1, 2, 3$) such that
+    \begin{align*}
+        x - y &= \frac{r_1}{s_1} p^{\alpha_1} \\
+        x - z &= \frac{r_2}{s_2} p^{\alpha_2} \\
+        y - z &= \frac{r_3}{s_3} p^{\alpha_3}.
+    \end{align*}
+    Note that each $\alpha_i$ is unique to the particular difference.
+    Without loss of generality, assume $\alpha_2 \geq \alpha_1$. If $\alpha_1 =
+    \alpha_3$, we are done, because $\rho(x,z) \leq \max\set{\rho(x,y), \rho(y,z)}$,
+    the other inequalities following easily. We have
+    \begin{align*}
+        y - z &= (y - x) + (x - z) \\
+        \frac{r_3}{s_3}p^{\alpha_3} &= \frac{r_2}{s_2} p^{\alpha_2} -
+        \frac{r_1}{s_1} p^{\alpha_1} \\
+        \frac{r_3}{s_3}p^{\alpha_3} &= \left(\frac{r_2}{s_2} p^{\alpha_2 -
+        \alpha_1} - \frac{r_1}{s_1} \right) p^{\alpha_1} \\
+        \frac{r_3}{s_3}p^{\alpha_3} &= \left(\frac{r_2p^{\alpha_2 -
+        \alpha_1} - r_1}{s_1s_2} \right) p^{\alpha_1}.
+     \end{align*}
+     It now suffices to show that 
+     \[
+         \gcd \left(\frac{r_2p^{\alpha_2 - \alpha_1} - r_1}{s_1s_2},
+         p \right) = 1.
+     \]
+     To this end, notice that the denominator is coprime with $p$, since both
+     $s_1$ and $s_2$ are coprime with $p$. And notice that the numerator is
+     coprime with $p$, since $r_1$ is coprime with $p$. Hence, we can write
+     \[
+         \frac{r_3}{s_3}p^{\alpha_3} = \frac{r_4}{s_4} p^{\alpha_1}
+     \]
+     where $r_4 = r_2 p^{\alpha_2 - \alpha_1} - r_1$ and $s_4 = s_1 s_2$ are
+     coprime with $p$. This implies that $\alpha_1 = \alpha_3$, and the result
+     follows.
+\end{proof}
