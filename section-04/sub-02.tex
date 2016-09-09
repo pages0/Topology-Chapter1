@@ -13,6 +13,40 @@ $$\sum_{i=1}^n x_iy_i \leq (\sum_{i=1}^n x_i^p)^{1/p} (\sum_{i=1}^ny_i^q)^{1/q}$
 \end{minorEx}
 
 \begin{proof}
-  
+  We will first show that if $\rho^{(p)}(x,y)=0$ then $x=y$. Let $x,y
+  \in \RR^n$ be arbitrary, such that $\rho^{(p)}(x,y)=0$. We then have that 
+  $$(\sum_{i=1}^n |x_i - y_i|^p)^{1/p} =0$$
+  and thus
+  $$\sum_{i=1}^n |x_i - y_i|^p =0$$
+  As $|x_i - y_i|^p$ is never negative for any $x_i,y_i$, we thus see
+  that for every $i$
+  $$|x_i - y_i|^p =0$$ and the exponent function is injective, we know
+  that $|x_i - y_i|=0$, and thus $x_i=y_i$ for all $i$, and thus by
+  definition of equality for $\RR^n$, we have $x=y$. As $x,y$ were
+  arbitrary, we know have that  if $\rho^{(p)}(x,y)=0$ then $x=y$.
+
+  We also see by the definition of equality on $\RR^n$, that if for
+  some $x,y\in \RR^n$ $x=y$, that for
+  every $i$, $x_i=y_i$, and thus $|x_i-y_i|=0$ for every $i$, and thus
+  $(\sum_{i=1}^n |x_i - y_i|^p)^{1/p}=0$  and thus
+  $\rho^{(p)}(x,y)=0$. We thus have that as $x,y$ were arbitrary, that
+  if $x=y$, then $\rho^{(p)}(x,y)=0$, and thus $\rho^{(p)}(x,y)=0$ iff
+  $x=y$.
+
+  We will now show that for any $x,y\in \RR^n$ that
+  $\rho(x,y)=\rho(y,x)$. Let $x,y\in \RR^n$ be arbitrary.
+  We see that 
+  $$\rho(x,y) = 
+  (\sum_{i=1}^n |x_i - y_i|^p)^{1/p}= 
+  (\sum_{i=1}^n |y_i - x_i|^p)^{1/p}= 
+  \rho(x,y)$$
+  and as $x,y$ were arbitray, we have that 
+   for any $x,y\in \RR^n$ that
+  $\rho(x,y)=\rho(y,x)$.
+
+  We now will show that $\rho(x,y) \leq \rho(x,z) + \rho(z,y)$ for any
+  $x,y,z$. Let $x,y,z \in \RR^n$ be arbitrary. We see that 
+  $$\rho(x,y)= 
+  (\sum_{i=1}^n |x_i - y_i|^p)^{1/p}=$$
 \end{proof}
 
