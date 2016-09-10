@@ -11,9 +11,21 @@
 
 \begin{proof}
   Let $X$ be an arbitrary metric space, and let $a,x\in X$ be
-  arbitrary.
-  We will first show that 
+  arbitrary such that $r
+  > \rho(a,x)$ for some $r\in \RR$.  We will first show that 
   $B_{r-\rho(a,x)}(x) \subset B_r(a)$ . Let $b \in B_{r-\rho(a,x)}(x)$
-  be arbitrary.
+  be arbitrary. Because $b \in B_{r-\rho(a,x)}(x)$, we know that
+  $\rho(b,x) < r- \rho(a,x)$, and thus   $\rho(b,x) + \rho(a,x)<
+  r$. We now can see by properties of a metric, that $\rho(b,a)<r$,
+  and thus by definition of $B_r(a)$, we know that $b \in B_r(a)$. As
+  $b$ was arbitrary, we know that $B_{r-\rho(a,x)}(x) \subset B_r(a)$.
+
+  We will now show that $D_{r-\rho(a,x)}(x) \subset D_r(a)$. Let $d 
+  \in D_{r-\rho(a,x)}(x)$ be arbitrary. Because $d \in D_{r-\rho(a,x)}(x)$, we know that
+  $\rho(d,x) \leq r- \rho(a,x)$, and thus   $\rho(d,x) + \rho(a,x)<
+  r$. We now can see by properties of a metric, that $\rho(d,a)<r$,
+  and thus by definition of $D_r(a)$, we know that $d \in D_r(a)$. As
+  $d$ was arbitrary, we know that $D_{r-\rho(a,x)}(x) \subset
+  D_r(a)$. As we have proven both claims, we know that the statement holds.
   
 \end{proof}
