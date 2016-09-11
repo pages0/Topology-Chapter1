@@ -15,5 +15,23 @@
 \end{majorEx}
 
 \begin{proof}
+  We will first prove that if $U$ is open in a metric space that it
+  contains a ball centered at this point. Let $x \in U$ be arbitrary.
+  By the definition the metric space, we know that $U$
+  is the union of open balls. As $x \in U$, we know that for some open
+  ball centered at $a$ with radius $r$,$x \in B_r(a)$. By definition
+  of an open ball, we know that as $x \in B_r(a)$, we have
+  $\rho(a,x)<r$, and thus by 4.E, we have that
+  $B_{r-\rho(a,x)}(x)\subset B_r(a)$, and thus  the set $U$ contains a
+  ball centered at $x$. As $x$ was arbitrary, we see that this is true
+  for every point in $U$, and thus that if $U$ is open in a metric space that it
+  contains a ball centered at this point.
 
+  We will now show that if every point in $U$ contains a ball within $U$ centered
+  at that point, that $U$ is an open set in a metric space. Consider
+  the set formed by taking the union of all the balls centered around
+  points in $U$. We would then see this union would contain every
+  point in $U$, and that because each ball is within $U$, that this
+  union would also be contained by $U$. We thus have that $U$ is equal
+  to the union of all these balls, and thus that $U$ is an open set.
 \end{proof}
