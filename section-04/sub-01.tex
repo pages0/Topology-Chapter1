@@ -25,9 +25,23 @@ is a metric for any set $X$
   
 
 \begin{majorEx} %4.B
-
+  Prove that $\RR \times \RR \rightarrow  \RR_+ : (x,y) \mapsto |x-y|$ is a metric
 \end{majorEx}
 
 \begin{proof}
+  We first can see that for any $x,y \in \RR, |x-y|=0$ is only true when $x-y=0$, and thus
+  when $x=y$. We thus have that $\rho(x,y)=0$ is true if and only if $x=y$
+  
+  We also can see that as for any $x,y\in \RR$, we have that if
+  $x-y=a$, for some $a\in \RR$ that  $y-x={-a}$. By the definition of
+  absolute value, we know that $|a| = |{-a}|$, and thus for any $x,y$,
+  we have that $\rho(x,y) = \rho(y,x)$. As $x,y$ were arbitrary, we
+  have that for all $x,y$ $\rho(x,y) = \rho(y,x)$.
 
+  We finally will prove that $\rho(x,y) \leq \rho(x,z) + \rho(z,y)$.
+  Let $x,y,z \in \RR$ be arbitrary. We see that $\rho(x,y)= |x-y| = |x-z+z-y|$,
+  and by the triangle inequality, we know that $|x-z+z-y|\leq |x-z| +
+  |z-y|=\rho(x,z)+ \rho(z,y)$. We thus have that $\rho(x,y) \leq
+  \rho(x,z) + \rho(z,y)$, and as $x,y,z$ were arbitrary, that this is
+  true for any $x,y,z$.
 \end{proof}
