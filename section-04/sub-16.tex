@@ -18,7 +18,7 @@ $\rho: X\times X \rightarrow \RR_+: (x,y) \mapsto $
 
 4.C: $\RR^n \times \RR^n \rightarrow \RR_+ : (x,y) \mapsto \sqrt{\Sigma_{i=1}^n (x_i-y_i)^2}$
 
-4.1: $\RR^n \times \RR^n \rightarrow \RR_+ : (x,y) \mapsto max_{i=1,...,n}|x_i-y_i$ 
+4.1: $\RR^n \times \RR^n \rightarrow \RR_+ : (x,y) \mapsto \max_{i=1,...,n}|x_i-y_i$ 
 
 4.2 $\RR^n \times \RR^n \rightarrow \RR_+ : (x,y) \mapsto \Sigma_{i=1}^n |x_i - y_i|$
 
@@ -26,7 +26,7 @@ We will first show that $4.A$ is an ultrametric, and that all other metrics have
 
 \begin{proof}
   We assume for sake of contradiction that $4.A$ is not an ultra metric, and thus 
-  that for some $x,y,z$ $\rho(x,y) > max \{\rho(x,z) , \rho(z,y)\}$. We thus see 
+  that for some $x,y,z$ $\rho(x,y) > \max \{\rho(x,z) , \rho(z,y)\}$. We thus see 
   that as there are only two possible values for $\rho$, that $\rho(x,y)=1$, and 
   $max \{\rho(x,z) , \rho(z,y)\}=0$ and thus $\rho(z,y)=0$ and $\rho(x,z)=0$. 
   However, we see that as $\rho(z,y)=0$, and $\rho(x,z)=0$ that by definition of 
