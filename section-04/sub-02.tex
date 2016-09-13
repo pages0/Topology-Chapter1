@@ -1,6 +1,82 @@
 \subsection{FurtherExamples}
 
-\begin{minorEx}
+\begin{minorEx}%4.1
+  Prove that $\RR^n \times \RR^n : \rightarrow \RR_+: (x,y) \mapsto
+  max_{i=1,...,n} |x_i-y_i|$ is a metric.
+\end{minorEx}
+
+\begin{proof}
+  We first see that if $\rho(x,y)=0$, that for some $i$, we know by
+  $4.B$ that $x_i = y_i$. As this is the maximum value, and the absolute
+  value function is never negative, we thus know that this must be
+  true for every $i$, and thus for every $i$ $x_i = y_i$. We thus have
+  that $\rho(x,y)=0$ if and only if $x=y$.
+
+  We will now show that for any $x,y\in \RR^n$ that 
+  $\rho(x,y) = \rho(y,x)$. Let $x,y \in \RR^n$ be arbitrary. We see
+  that for some $i$, $\rho(x,y) = |x_i-y_i|$. By $4.B$, we have that 
+  $|x_i-y_i| = |y_i-x_i|$. By the definition of max, we know that $i$
+  is such that $|x_i-y_i| \geq |x_j-y_j|$ for any $j$, and thus, 
+ $|y_i-x_i|\geq |y_j-x_j|$, and we have that $\rho(y,x)=|y_i-x_i|$
+ We thus have that $\rho(x,y)=|x_i-y_i| = |y_i-x_i|=\rho(y,x)$. As
+ $x,y$were arbitrary, we see that for all $x,y$, $\rho(x,y) =
+ \rho(y,x)$
+
+ We will finally show that for any $x,y,z\in \RR^n$, that
+ $\rho(x,y)\leq \rho(x,z)+ \rho(z,y)$. Let $x,y,z \in \RR^n$ be aribtrary.We see that for some $i$, 
+ $\rho(x,y) = |x_i-y_i|$, and by $4.B$, we know that $ |x_i-y_i| \leq
+ |x_i-z_i| +|z_i-y_i|$, and by definition of max, we have that
+ $\rho(x,z)\geq |x_i-z_i|$, and  $\rho(z,y)\geq |z_i-y_i|$. We thus
+ see that $\rho(x,y)\leq \rho(x,z)+ \rho(z,y)$, and as $x,y,z$ were
+ arbitrary, we have that this is true for any $x,y,z\in \RR^n$
+
+ As we have show that all properties of a metric hold, we know that 
+ $\RR^n \times \RR^n : \rightarrow \RR_+: (x,y) \mapsto
+  max_{i=1,...,n} |x_i-y_i|$ is a metric.
+\end{proof}
+
+\begin{minorEx}%4.2
+  Prove that $\RR^n \times \RR^n :\rightarrow \RR_+: (x,y) \mapsto
+  \Sigma_{i=1,...,n} |x_i- y_i|$ is a metric.
+\end{minorEx}
+
+\begin{proof}
+  We will first show that if $\rho(x,y)=0$, that $x=y$. Let $x,y\in
+  \RR^n$ be arbitrary. We see that
+  for any $i$, $|x_i-y_i|\geq 0$ by the definition of absolute value,
+  and thus as$\rho(x,y) =0$ we have that for every $i$,
+  $|x_i-y_i|=0$, and thus by $4.B$, $x_i=y_i$, and thus $x=y$. As
+  $x,y$ were arbitrary, we see that this is true for any $x,y \in
+  \RR^n$. We can also see that if $x=y$, that for each $i$ $x_i=y_i$,
+  and thus $|x_i-y_i| = 0$, and thus $\rho(x,y)=0$. We see as both
+  directions hold that $\rho(x,y)=0$ if and only if $x=y$.
+
+  We will now show that for any $x,y$, $\rho(x,y)=\rho(y,x)$. Let
+  $x,y\in \RR^n$ be arbitrary. We see that $\rho(x,y)= \Sigma_{i=1}^n
+  |x_i-y_i| = \Sigma_{i=1}^n |y_i - x_i|= \rho(y,x)$, and as $x,y \in
+  \RR^n$ were arbitrary, we have that $\rho(x,y)=\rho(y,x)$ for all
+  $x,y\in \RR^n$
+
+  Finally, we will show that for any $x,y,z \in \RR^n$ that 
+  $\rho(x,y) \leq \rho(x,z) + \rho(z,y)$. We see that 
+  $$\rho(x,y) = \Sigma_{i=1}^n |x_i-y_i|=\Sigma_{i=1}^n
+  |x_i-z_i+z_i-y_i| $$
+  and by the triangle inequality, 
+    $$\Sigma_{i=1}^n |x_i-z_i+z_i-y_i| \leq  \Sigma_{i=1}^n
+    |x_i-z_i|+|z_i-y_i|$$
+    We now see by spliting up the sums, that we have that 
+    $$\Sigma_{i=1}^n  |x_i-z_i|+|z_i-y_i| = \Sigma_{i=1}^n |x_i-z_i|
+    +\Sigma_{i=1}^n |z_i-y_i|=\rho(x,z)+\rho(z,y)$$
+    and thus $\rho(x,y) \leq \rho(x,z)+\rho(z,y)$. As $x,y,z$ were
+    arbitrary, we have that this is true for any $x,y,z \in \RR^n$.
+
+    As we have shown all properties of a metrics hold, we know that 
+    $\RR^n \times \RR^n :\rightarrow \RR_+: (x,y) \mapsto
+  \Sigma_{i=1,...,n} |x_i- y_i|$ is a metric.
+\end{proof}
+
+
+\begin{minorEx}%4.3
   Prove that $\rho^{p}$ is a metric for any $p \geq 1$, where
 
 $$\rho^{(p)} : (x,y) \mapsto (\sum_{i=1}^n |x_i - y_i|^p)^{1/p} \text{,   }p\geq 1$$
@@ -45,8 +121,7 @@ $$\sum_{i=1}^n x_iy_i \leq (\sum_{i=1}^n x_i^p)^{1/p} (\sum_{i=1}^ny_i^q)^{1/q}$
   $\rho(x,y)=\rho(y,x)$.
 
   We now will show that $\rho(x,y) \leq \rho(x,z) + \rho(z,y)$ for any
-  $x,y,z$. Let $x,y,z \in \RR^n$ be arbitrary. We see that 
-  $$\rho(x,y)= 
-  (\sum_{i=1}^n |x_i - y_i|^p)^{1/p}=$$
+  $x,y,z$. We see by refering to ``When Cauchy and Holder Met
+  Minkowski: a Tour through well-known inequalities'' that this is true.
 \end{proof}
 

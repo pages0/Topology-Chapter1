@@ -1,5 +1,14 @@
 \subsection{Subspaces of a Metric Space}
-
+\begin{majorEx}%4.D
+Check that $D^1$ is the segment $[-1, 1]$, $D^2$ is a plane disk, $S^0$ the pair of points ${-1, 1}$, $S^1$ is a circle, $S^2$ is a sphere, and $D^3$ is a ball
+\end{majorEx}
+\begin{proof}[Answer]
+$D^1$ is, by definition, the set of values $x \in mathds{R}$ for which $\rho (x, 0) \leq 1$. In $\RR$, this is the set of values $[-1, 1]$ for the Euclidean metric.
+$D^2$ is, by definition, the set of values $x \in \RR^2$ for which $\rho (x, (0, 0)) \leq 1$. In $\RR^2$, this is a disk - we are assured it is closed by the non-strict inequality - centered around (0, 0).
+$S^0$ is, by definition, the set of values $x \in \RR$ for which $\rho (x, 0) = 1$. In $\RR$, this is exactly the set of values with an absolute value of 1, i.e. ${1, -1}$.
+$S^1$ is, by definition, the set of values $x \in \RR^2$ for which $\rho (x, (0, 0)) = 1$. In $\RR^2$, this is the set of values on the exterior of $D^2$, i.e. a sphere centered around (0,0) with radius 1.
+$D^3$ is, by definition, the set of values $x \in \RR^2$ for which $\rho (x, (0, 0, 0)) \leq 1$. In $\RR^3$ this takes the shape of a closed ball, because of the way that $rho (x, (0, 0, 0))$ scales sublinearly with each component of x.
+\end{proof}
 
 \begin{majorEx}%4.E
   Prove that for any points $x$ and $a$ of any metric space and any $r
@@ -11,9 +20,25 @@
 
 \begin{proof}
   Let $X$ be an arbitrary metric space, and let $a,x\in X$ be
-  arbitrary.
-  We will first show that 
+  arbitrary such that $r
+  > \rho(a,x)$ for some $r\in \RR$.  We will first show that 
   $B_{r-\rho(a,x)}(x) \subset B_r(a)$ . Let $b \in B_{r-\rho(a,x)}(x)$
-  be arbitrary.
-  
+  be arbitrary. Because $b \in B_{r-\rho(a,x)}(x)$, we know that
+  $\rho(b,x) < r- \rho(a,x)$, and thus   $\rho(b,x) + \rho(a,x)<
+  r$. We now can see by properties of a metric, that $\rho(b,a)<r$,
+  and thus by definition of $B_r(a)$, we know that $b \in B_r(a)$. As
+  $b$ was arbitrary, we know that $B_{r-\rho(a,x)}(x) \subset B_r(a)$.
+
+  We will now show that $D_{r-\rho(a,x)}(x) \subset D_r(a)$. Let $d 
+  \in D_{r-\rho(a,x)}(x)$ be arbitrary. Because $d \in D_{r-\rho(a,x)}(x)$, we know that
+  $\rho(d,x) \leq r- \rho(a,x)$, and thus   $\rho(d,x) + \rho(a,x)<
+  r$. We now can see by properties of a metric, that $\rho(d,a)<r$,
+  and thus by definition of $D_r(a)$, we know that $d \in D_r(a)$. As
+  $d$ was arbitrary, we know that $D_{r-\rho(a,x)}(x) \subset
+  D_r(a)$. As we have proven both claims, we know that for any points
+  $x$ and $a$ of any metric space and any $r 
+  > \rho(a,x)$ we have
+
+  $$B_{r-\rho(a,x)}(x) \subset B_r(a) \text{  and  }
+  D_{r-\rho(a,x)}(x) \subset D_r(a)$$
 \end{proof}
