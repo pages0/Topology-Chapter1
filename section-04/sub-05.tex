@@ -35,10 +35,20 @@ Find $D_1(a)$, $D_(1/2)(a)$, and $S_(1/2)(a)$ in the space of 4.A.
 For a set $X$ with the metric described in 4.A, $D_1(a)$ is the entire set $X$, $D_(1/2)(a)$ is a singleton with just the element $a$, and $S_(1/2)(a)$ is the emptyset.
 \end{proof}
 
-\begin{minorEx}
+\begin{minorEx}%4.9
     Find a metric space and two balls in it such that the ball with the smaller
     radius contains the ball with the bigger one and does not coincide with it.
 \end{minorEx}
+
+\begin{proof}[Answer]
+  Consider the metric space on the subset of $\RR$, $\{-1,0,1\}$. We
+  see that the ball $B_{1.2}(0) = \{-1,0,1}$, and that the ball 
+  $B_{1.5}(-1)=\{-1,0\}$. We thus see that $B_{1.5}(-1) \subset
+  B_{1.2}(0)$, and $B_{1.5}(-1) \not\subset B_{1.2}(0)$, and thus this
+  space has a ball with a smaller radius which contains a ball with a
+  larger radius, which does not coincidde with it
+  
+\end{proof}
 
 \begin{minorEx}
     What is the minimal number of points in the space which is required to be
