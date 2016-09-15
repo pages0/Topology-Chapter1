@@ -1,1 +1,68 @@
 \subsection{Characterization of Topology in Terms of Closed Sets}
+
+\begin{minorEx}
+    Suppose a collection $\mathcal{F}$ of subsets of $X$ satisfies the
+    followings conditions:
+    \begin{enumerate}
+        \item the intersection of any family of sets from $\mathcal{F}$ belongs
+            to $\mathcal{F}$;
+        \item the union of any finite number sets from $\mathcal{F}$ belongs to
+            $\mathcal{F}$;
+        \item $\emptyset$ and $X$ belongs to $\mathcal{F}$.
+    \end{enumerate}
+    Prove that then $\mathcal{F}$ is the set of all closed sets of a topological
+    structure (which one?).
+\end{minorEx}
+
+\begin{proof}
+    We show that with $\Omega = \mathcal{P}(X) \setminus \mathcal{F}$,
+    $\mathcal{F}$ is the set of all closed sets of $(X, \Omega)$.  To do so, we
+    will show that $(X, \Omega)$ is, in fact, a topological structure. As a
+    consequence, we shall see that our desired result falls out of this
+    investigation.
+
+    Let $\Omega' \subseteq \Omega$ be arbitrary, and consider
+    \[
+        U = \bigcup_{S \in \Omega'} S.
+    \]
+    Now, since $S \in \Omega' \subseteq \Omega$, there exists some $K \in
+    \mathcal{F}$ such that $S = X \setminus K$. If $\mathcal{F}' \subseteq
+    \mathcal{F}$ is the collection which corresponds to $\Omega'$ through
+    the complement in this way, we may thus write using De Morgan's laws
+    \begin{align*}
+        \bigcup_{S \in \Omega'} S &= \bigcup_{K \in \mathcal{F}'} X \setminus K
+        \\
+        &= X \setminus \bigcap_{K \in \mathcal{F}'} K \\
+        &= X \setminus C,
+    \end{align*}
+    where $C \in \mathcal{F}$, using property (1). Hence, we have $U = X
+    \setminus C$, so $U \in \Omega$.
+
+    Let $\Omega' \subseteq \Omega$ be an arbitrary finite collection of sets,
+    and consider 
+    \[
+        U = \bigcap_{S \in \Omega'} S.
+    \]
+    Now, since $S \in \Omega' \subseteq \Omega$, there exists some $K \in
+    \mathcal{F}$ such that $S = X \setminus K$. If $\mathcal{F}' \subseteq
+    \mathcal{F}$ is the (finite) collection which corresponds to $\Omega'$
+    through the complement in this way, we may thus write using De Morgan's laws
+    \begin{align*}
+        \bigcap_{S \in \Omega'} S &= \bigcap_{K \in \mathcal{F}'} X \setminus K
+        \\
+        &= X \setminus \bigcup_{K \in \mathcal{F}'} K \\
+        &= X \setminus C,
+    \end{align*}
+    where $C \in \mathcal{F}$, using property (2). Hence, we have $U = X
+    \setminus C$, so $U \in \Omega$.
+
+    Finally, note that $X = X \setminus \emptyset$, so $X \in \Omega$;
+    similarly, $\emptyset \in \Omega$. Hence, $(X, \Omega)$ satisfies the
+    topological axioms. As a consequence, $\mathcal{F}$ characterizes the closed
+    sets of this topological space.
+\end{proof}
+
+\begin{minorEx}
+    List all collections of subsets of a three-element set such that there are
+    topologies where these collections are complete sets of closed sets.
+\end{minorEx}

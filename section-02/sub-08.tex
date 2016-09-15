@@ -19,13 +19,49 @@ $(0, 1]$ is not open because we have to have infinite unions or intersections of
 
 Primary Author: Jimin Tan
 
-\begin{minorEx} %2.10
-\end{minorEx}
-
 \begin{majorEx} %2.H
 Is a closed segment $[a, b]$ closed in $\RR$?
 Yes, it is. The complement of a closed segment $[a, b]$ is the union of the open sets $\{x | x < a\}$ and $\{x | x > b\}$, and so the closed segment is closed by the definition of a closed set and the standard topology on $RR$.
 \end{majorEx}
+
+\begin{minorEx}
+    Give an explicit description of closed sets in
+    \begin{enumerate}
+        \item a discrete space;
+        \item an indiscrete space;
+        \item the arrow;
+        \item the weird one;
+        \item $\RR_{T_1}$.
+    \end{enumerate}
+\end{minorEx}
+
+\begin{proof}[Answer]
+    \begin{enumerate}
+        \item Since $A \in \Omega$ whenever $A \subseteq X$, it follows that
+            both $X \setminus A \in \Omega$ as well; hence, for all $A \subseteq
+            X$, we have that $A$ is closed. The closed sets are therefore
+            comprised of $\mathcal{P}(X) = \Omega$.
+        \item Since $X = X \setminus \emptyset$ and $\emptyset = X \setminus X$,
+            the closed sets are therefore $\set{X, \emptyset} = \Omega$.
+        \item We have that
+            \[
+                \mathcal{F} = \set{[0, a] : a \geq 0} \cup \set{\RR_+,\emptyset}.
+            \]
+        \item We have that
+            \[
+                \mathcal{F} = \set{
+                    \set{a,b,c,d}, \emptyset, \set{b,c,d}, \set{a,c,d},
+                    \set{b,d}, \set{d}, \set{c, d}
+                }.
+            \]
+        \item We have that 
+            \[
+                \mathcal{F} = \set{A : \abs{A} = n \text{ for some } n \geq 0}
+                \cup \set{\RR}. \qedhere
+            \]
+    \end{enumerate}
+\end{proof}
+
 
 \begin{minorEx} %2.11
   Prove that the half-open interval $[0,1)$  is neither open nor
