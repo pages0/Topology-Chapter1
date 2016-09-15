@@ -47,14 +47,46 @@ For a set $X$ with the metric described in 4.A, $D_1(a)$ is the entire set $X$, 
   B_{1.2}(0)$, and $B_{1.5}(-1) \not\subset B_{1.2}(0)$, and thus this
   space has a ball with a smaller radius which contains a ball with a
   larger radius, which does not coincidde with it
-  
 \end{proof}
 
-\begin{minorEx}
+\begin{minorEx}%4.10
     What is the minimal number of points in the space which is required to be
     constructed in 4.9?
 \end{minorEx}
 
-\begin{minorEx}
+\begin{proof}[Answer]
+  The minimal number of points in the space which is required is
+  $3$. We first consider a space with one point $a$ we see that for
+  any $r,r^\prime$, where $r > 0,r^\prime > 0$. We see for any metric
+  $\rho$ that $\rho(a,a)=0$, and thus by the
+  definition of a ball, $B_r(a)= B_{r^\prime}(a)=\{a\}$, and thus all
+  balls must coincide . We will now consider a space with two
+  points $a$, $b$. Let $r>r^\prime\in \RR_+$ be arbitrary. Suppose
+  that without loss of generality $B_{r^\prime}(a)$ contains $B_{r}(b)$, and thus
+  $B_{r^\prime}(a)=\{a,b\}$.
+ We see that $b\in
+  B_{r^\prime}(a)$, and thus $\rho(a,b)<r^\prime$, and thus
+  $\rho(a,b)<r$, and finally, we can see that $\rho(b,a)<r$ by
+  properties of a metric, and thus by the definition of a
+  ball,$B_{r}(b)=\{a,b\}$, and thus $B_{r}(b)$, and $B_{r^\prime}(a)$
+  coincide. We also can see that as
+  $\rho(a,b)<r^\prime$, implies $\rho(a,b)<r$, that we know that
+  $ B_{r^\prime}(a) \subset B_{r}(a)$. $r>r^\prime\in \RR_+$ were
+  arbitrary, we know that a ball with a smaller radius cannot contain
+  a ball with a larger radius if there are only two points.
+\end{proof}
+
+\begin{minorEx}%4.11
     Prove that the largest radius in 4.9 is at most twice the smaller radius.
 \end{minorEx}
+
+\begin{proof}[Answer]
+  We will show this using proof by contradiction. Assume for sake of
+  contradiction, that for some metric space with $r>2r^\prime \in
+  \RR_+$, that for some points $a,b$ $B_r(a) \subset B_{r^\prime}(b)$,
+  and for some $c$, $c \in B_{r^\prime}(b)$, and $c \notin
+  B_r(a)$. Let $c$ be an arbitrary point such that $c \in
+  B_{r^\prime}(b)$, and $c \notin  B_r(a)$. Because $c \in
+  B_{r^\prime}(b)$ we know that $\rho(c,b)<r^\prime$, and because
+  $c \notin  B_r(a)$, we know that $\rho(a,c)\geq r$. We also have that
+\end{proof}
