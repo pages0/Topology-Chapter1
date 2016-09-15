@@ -9,6 +9,32 @@ We claim that two distinct topological structures must have different bases.
 Assume that two different topological structure $\Omega_1$ and $\Omega_2$ have the same base $S_b$. Every subset in $\Omega_1$ can be expressed as unions of elements in $S_b$ which will be in $\Omega_2$ by definition of topological structure. So we reach a conclusion that $\Omega_1$ is the same as $\Omega_2$ since they contain the same elements, a contradiction.
 \end{proof}
 
+\begin{minorEx}
+    Find some bases for the topology of
+    \begin{enumerate}
+        \item a discrete space;
+        \item the weird space;
+        \item an indiscrete space;
+        \item the arrow.
+    \end{enumerate}
+    Try to choose the smallest base possible.
+\end{minorEx}
+
+\begin{proof}[Answer]
+    \begin{enumerate}
+        \item Let $\Sigma = \set{\set{x} : x \in X} \cup \set{\emptyset}$ be the set of all
+            singleton subsets of $X$. Then any nonempty subset of $X$ can be
+            represented by the union of all its singleton element sets.
+        \item Let $\Sigma = \set{\set{a}, \set{b}, \set{c}, \set{d}}$. Every
+            element of $\Omega$ is a union of some of these singletons.
+        \item Let $\Sigma = \set{X, \emptyset}$. This is the smallest basis,
+            since both are needed to generate $\set{X, \emptyset} = \Omega$.
+        \item Whenever $a < b$, we have $(a, \infty) \cup (b, \infty) = (a,
+            \infty)$, so each open set of the arrow is necessary to generate
+            itself. Hence, $\Sigma = \Omega$.
+    \end{enumerate}
+\end{proof}
+
 Primary Author: Jimin Tan
 
 \begin{minorEx}[Riddle]%3.3
