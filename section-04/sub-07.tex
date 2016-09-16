@@ -1,10 +1,43 @@
 \subsection{Bounded Sets and Balls}
 
-\begin{majorEx}
+\begin{majorEx}%4.F
     Prove that a set $A$ is bounded iff $A$ is contained in a ball.
 \end{majorEx}
 
-\begin{minorEx}
+\begin{proof}
+  We will first show that if a set $A$ is bounded then it is contained
+  in a ball. Because $A$ is bounded, we know that there is a number
+  $d>0$ such that for any $x,y \in A$, that $\rho(x,y)<d$. We thus
+  have that for an arbitrary point $a$ that $B_d(a)$ will contain
+  every point in $A$, by the definition of a ball.
+
+  We will now show that if a set $A$ is contained in a ball, that it
+  is bounded. Let $B_r(a)$ be a ball which contains $A$. Let $x,y\in
+  A$ be arbitrary. We see that by the triangle inequality, that 
+  $\rho(x,y)\leq \rho(x,a) + \rho(y,a)$, and by the definition of a
+  ball, we have that $\rho(x,a)<r$, and  $\rho(y,a)<r$ as $A$ is
+  contained within the ball. We thus would see that  $\rho(x,y)< 2r$,
+  and thus as $x,y\in A$ were arbitrary, that  for any $x,y$, we have
+  that $\rho(x,y)< 2r$, and as $2r>0$, we know that $A$ is bounded by
+  the definition of bounded.
+\end{proof}
+
+
+\begin{minorEx}%4.14
     What is the relation between the minimal radius of such a ball and
     $\mathrm{diam}(A)$?
 \end{minorEx}
+
+\begin{proof}[Answer]
+  $2r\geq \mathrm{diam}(A) \geq r$, where $r$ is the minimal radius of such a
+  ball. We see that $2r\geq \mathrm{diam}(A)$ above, as for an
+  arbitrary ball with radius $r$, for any $x,y\in A$,
+  $\rho(x,y)<2r$. We will now show that $\mathrm{diam}(A) \geq r$.
+  We will show this using proof by contradiction. We assume for
+  sake of contradiction, that  $\mathrm{diam}(A) < r$. Let a ball
+  which contains $A$ be $B_r(a)$. We would then have that for any $x\in B_r(a)$
+  have that $\rho(a,x)<\mathrm{diam}(A)<r$, and thus $r$ is not the
+  minimal radius, and we have a contradiction. 
+  We thus have that $2r\geq \mathrm{diam}(A) \geq r$.
+\end{proof}
+
