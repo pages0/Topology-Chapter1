@@ -1,6 +1,6 @@
 \subsection{Segments (What Is Between)}
 
-\begin{minorEx}
+\begin{minorEx}%4.12
     Prove that the segment with endpoints $a,b \in \RR^n$ can be described as 
     \[
         \set{x \in \RR^n : \rho(a,x) + \rho(x,b) = \rho(a, b)},
@@ -8,8 +8,37 @@
     where $\rho$ is the Euclidean metric.
 \end{minorEx}
 
-\begin{minorEx}
+\begin{proof}
+  Let $a,b \in \RR^n$ be arbitrary, and let them define a segment. Let
+  $c$ be an arbitrary point on that segment. We see that the distance
+  between $c$ and $a$ is given by $\rho(a,c)$, and the distance
+  between $c$ and $b$ is given by $\rho(c,b)$. We also see that as $c$
+  is on the segment, that the shortest distance between $a$ and $b$,
+  given by $\rho(a,b)$, can also be given by moving from $a$ to $c$,
+  and then from $c$ to $b$. We see that the distance given from moving
+  from $a$ to $c$, and then $c$ to $b$ is also given by
+  $\rho(a,c)+\rho(c,b)$, and thus $\rho(a,c)+\rho(c,b)= \rho(a,b)$. We
+  thus have that if $c$ is on the segment, that $\rho(a,c)+\rho(c,b)=
+  \rho(a,b)$. We can also see that if we know that $\rho(a,c)+\rho(c,b)=
+  \rho(a,b)$, that we know that going from $a$ to $c$, and then $c$ to
+  $b$ is the shortest distance between $a$ to $b$, and thus $c$ is on
+  the segment between $a$ and $b$. As $c$ was arbitrary, and we showed
+  both that $\rho(a,c)+\rho(c,b)= \rho(a,b)$ implies $c$ is on the
+  segment, and that $c$ being on the segment implies that
+  $\rho(a,c)+\rho(c,b)= \rho(a,b)$, we know the 
+  segment with endpoints $a,b \in \RR^n$ can be described as 
+    \[
+        \set{x \in \RR^n : \rho(a,x) + \rho(x,b) = \rho(a, b)},
+    \]
+    where $\rho$ is the Euclidean metric.
+\end{proof}
+
+\begin{minorEx}%4.13
     How does the set defined as in Problem 4.12 look if $\rho$ is the metric
     defined in Problems 4.1 or 4.2? (Consider the case where $n = 2$ if it seems
     to be easier.)
 \end{minorEx}
+
+\begin{proof}[Answer]
+
+\end{proof}
