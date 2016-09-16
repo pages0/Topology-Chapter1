@@ -43,7 +43,22 @@ $D^3$ is, by definition, the set of values $x \in \RR^2$ for which $\rho (x, (0,
   D_{r-\rho(a,x)}(x) \subset D_r(a)$$
 \end{proof}
 
-\begin{minorEx}
+\begin{minorEx}%4.6
     What if $r < \rho(x,a)$? What is an analog for the statement of Problem 4.E
     in this case?
 \end{minorEx}
+
+\begin{proof}[Answer]
+  We will consider the analog for Balls around $x$ and $a$, if $r<
+  \rho(x,a)$. We will show that $B_r(a) \cap B_{\rho(x,a)-r}(x) =
+  \emptyset$. Let $y\in B_{r}(a)$ be arbitrary. We see by
+  definition of an open ball, that $\rho(a,y) < r$. 
+  We now consider $\rho(a,x)$. We have that 
+  $\rho(a,x) \leq \rho(a,y) + \rho(y,x)$ by the triangle inequality,
+  and thus $\rho(x,a) - \rho(a,y) \leq\rho(y,x)$. We also see that as
+  $\rho(a,y) < r$, that $\rho(x,a) - r \leq\rho(y,x)$, and by
+  definition of an open ball, we know that $y \notin B_{\rho(x,a)-r}$.
+  As $y$ was arbitrary, we see that if a point is an element of
+  $B_r(a)$, that it cannot be an element of $B_{\rho(x,a)-r}(x)$. We
+  thus see that $B_r(a) \cap B_{\rho(x,a)-r}(x) = \emptyset$
+\end{proof}

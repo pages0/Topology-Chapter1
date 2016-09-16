@@ -42,7 +42,7 @@ For a set $X$ with the metric described in 4.A, $D_1(a)$ is the entire set $X$, 
 
 \begin{proof}[Answer]
   Consider the metric space on the subset of $\RR$, $\{-1,0,1\}$. We
-  see that the ball $B_{1.2}(0) = \{-1,0,1}$, and that the ball 
+  see that the ball $B_{1.2}(0) = \{-1,0,1\}$, and that the ball 
   $B_{1.5}(-1)=\{-1,0\}$. We thus see that $B_{1.5}(-1) \subset
   B_{1.2}(0)$, and $B_{1.5}(-1) \not\subset B_{1.2}(0)$, and thus this
   space has a ball with a smaller radius which contains a ball with a
@@ -81,12 +81,15 @@ For a set $X$ with the metric described in 4.A, $D_1(a)$ is the entire set $X$, 
 \end{minorEx}
 
 \begin{proof}[Answer]
-  We will show this using proof by contradiction. Assume for sake of
-  contradiction, that for some metric space with $r>2r^\prime \in
-  \RR_+$, that for some points $a,b$ $B_r(a) \subset B_{r^\prime}(b)$,
-  and for some $c$, $c \in B_{r^\prime}(b)$, and $c \notin
-  B_r(a)$. Let $c$ be an arbitrary point such that $c \in
-  B_{r^\prime}(b)$, and $c \notin  B_r(a)$. Because $c \in
-  B_{r^\prime}(b)$ we know that $\rho(c,b)<r^\prime$, and because
-  $c \notin  B_r(a)$, we know that $\rho(a,c)\geq r$. We also have that
+  Let $a,b,c$ be arbitrary points such that $B_r(a) \subset B_{r^\prime}(b)$,
+  and $c \in B_{r^\prime}(b)$, and $c \notin
+  B_r(a)$. Because $c \in B_{r^\prime}(b)$ we know that 
+  $\rho(c,b)<r^\prime$, and because
+  $c \notin  B_r(a)$, we know that $\rho(a,c)\geq r$. We also have
+  that as $B_r(a) \subset B_{r^\prime}(b)$, that
+  $\rho(b,a)<r^\prime$. We now see by the triangle inequality, that 
+  $\rho(a,c) \leq \rho(c,b)+ \rho(b,a)$, and thus 
+  $r \leq r^\prime +r^\prime$, and we have that $r\leq 2r^\prime$. We
+  thus know that the largest radius in 4.9 is at most twice the
+  smaller radius.
 \end{proof}

@@ -125,13 +125,27 @@ $$\sum_{i=1}^n x_iy_i \leq (\sum_{i=1}^n x_i^p)^{1/p} (\sum_{i=1}^ny_i^q)^{1/q}$
   Minkowski: a Tour through well-known inequalities'' that this is true.
 \end{proof}
 
-\begin{minorEx}
+\begin{minorEx}%4.4
     [Riddle]
     How is this related to $\Sigma^2$, $\Sigma^{\infty}$, and $\Sigma^1$ from
     Section 3?
 \end{minorEx}
 
-\begin{minorEx}
+\begin{proof}[Answer]
+  As $\Sigma^2,\Sigma^\infty$, and $\Sigma^1$ were respectively the
+  set of all possible open disks,  the set of all possible open
+  squares with sides parallel to the coordinate axes,
+  and the set of all possible open squares with sides
+  parallel to the bisectors of the coordinate angles, and the metrics 
+  $\rho^2,\rho^\infty$, and $\rho^1$ define open balls that are
+ open disks, open squares parallel to the coordinate axes, and open
+ squares parallel to the bisectors of the coordinate angles, that each
+ element of these bases can be defined as a ball around a certain
+ point with a certain radius, that each metric defines their
+ corresponding basis, in $\RR^2$.
+\end{proof}
+
+\begin{minorEx}%4.5
     Let $p \geq 1$. Prove that for any two sequences $x, y \in l^{(p)}$ the
     series $\sum_{i=1}^{\infty} \abs{x_i - y_i}^p$ converges and that
     \[
