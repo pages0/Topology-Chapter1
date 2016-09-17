@@ -42,7 +42,31 @@ Primary Author: Jimin Tan
 \end{minorEx}
 \begin{proof}
   Let $\Sigma$ be a base of the canonical topology on $\RR$. Let $A$ be an element of 
-  $\Sigma$. We see that $A$ is an open set, and thus an aritrary union of open intervals. 
+  $\Sigma$. We see that $A$ is an open set, and thus an arbitrary
+  union of open intervals. We let $(a,b)$  be an arbitrary open
+  interval such that $(a,b)\cup B =A$ where $B$ is a possibly empty
+  union of open intervals. We see that by the definition of a base,
+  that as $(a,b)$ is in the cannonical topology, and $B$ is in the
+  cannonical topology, that there must already be some collection of
+  elements in $\Sigma$ such that $(a,b)$ and $B$ are unions of those
+  elements. We thus see that if $A$ is of the form $(a,b)\cup B$ , that
+  it can be removed from $\Sigma$, and thus $\Sigma$ 
+  can be decreased. 
+
+  We now suppose that $A$ is not a union of open intervals, and is instead
+  just an open interval $(a,b)$. We now let $c\in (a,b)$, and
+  $d\in (a,c)$, and $e\in (c,b)$. We see that $(a,e)$ and $(d,b)$ are
+  in the canonical topology on $\RR$, and thus that they are the union
+  of some set of elements in $\Sigma$. This set of elements does not
+  include $A$, as $d,e\in A$, and thus a union of $A$ with other
+  elements would contain $d$ and $e$. We now see that as 
+  $(a,e)\cup (d,b) = (a,b)$, that a union of elements in $\Sigma$ will
+  include $A$, and thus that removing $A$ from $\Sigma$ would not
+  remove any element from the cannonical topology, and thus that
+  $\Sigma$ can be decreased. As $A$ was arbitrary, and $\Sigma$ was
+  arbitrary, and in all cases we were able to remove $A$ from
+  $\Sigma$, we see that any base of the cannonical topology 
+  can be decreased.
 \end{proof}
 
 Primary author: Reilly Noonan Grant
