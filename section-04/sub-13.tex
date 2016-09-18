@@ -1,3 +1,4 @@
+\subsection{Operations with Metrics}
 \begin{minorEx}
     \begin{enumerate}
         \item Prove that if $\rho_1$ and $\rho_2$ are two metrics in $X$, then
@@ -24,6 +25,93 @@
     \end{enumerate}
 \end{minorEx}
 
+\begin{proof}
+    \begin{enumerate}
+        \item Let $d(x,y) = \frac{\rho(x,y)}{1 + \rho(x,y)}$. That $d(x,x) = 0$
+            and $d(x, y) = d(y, x)$ follow from inspection of the construction
+            of $d$. The triangle inequality emerges less elegantly, as we shall
+            see:
+            \begin{align*}
+                \rho(x, y) &\leq \rho(x, z) + \rho(z, y) \\
+                \rho(x, y) + \rho(x, y) (\rho(z, y) + \rho(x, z) (1 + \rho(y,
+                z)))
+                &\leq
+                \rho(x, z) + \rho(z, y) + \rho(x, y) (\rho(z, y) + \rho(x, z) (1
+                + 2\rho(y, z))) \\
+                &\vdots
+            \end{align*}
+        \item Let $d(x,y) = \min\set{p(x,y), 1}$. That $d(x,x) = 0$ and $d(x,y)
+            = d(y,x)$ follow from inspection. We show that the triangle
+            inequality holds. 
+
+            Suppose $\rho(x,y) \leq 1$. For any $z$, either $\rho(x,z) \leq 1$ and
+            $\rho(z, y) \leq 1$, or not. If so, then
+            \[
+                \min\set{\rho(x,z), 1} = \rho(x,z) \qquad \text{and} \qquad
+                \min{\set{\rho(z,y), 1} = \rho(z,y),
+            \]
+            and applying the the triangle inequality gives the needed result.
+            Otherwise, $\rho(x,y) \leq 1$, so the triangle inequality holds. 
+
+            Suppose $\rho(x, y) \geq 1$. If both $\rho(x,z) \leq 1$ and
+            $\rho(z,y) \leq 1$, we have
+            \[
+                d(x,y) = 1 \leq  \rho(x,y) \leq \rho(x,z) + \rho(z, y) = d(x,z)
+                + d(y,z),
+            \]
+            verifying the triangle inequality. Otherwise, since $1 \leq 1$, the
+            inequality holds easily.
+        \item Let $d(x, y) = f(\rho(x,y))$, where $f$ is defined as above.
+            Since $\rho(x, y) = 0$ if and only if $x = y$, and since $f(0) = 0$,
+            we have $d(x, y) = 0$ if and only if $x = y$. Since $\rho(x, y) =
+            \rho(y, z)$, we have $d(x,y) = f(\rho(x,y)) = f(\rho(y,z)) =
+            d(y,z)$. Finally, since $\rho$ is nonnegative, and since $f$ is
+            monotonically increasing, we have 
+            \[
+                d(x,y) = f(\rho(x, y)) \leq f(\rho(x,z) + \rho(z,y)).
+            \]
+            Since $f(a + b) \leq f(a) + f(b)$, we have
+            \[
+                f(\rho(x, z) + \rho(z, y)) \leq f(\rho(x,z) + \rho(z, y)).
+            \]
+            Hence,
+            \[
+                d(x,y) \leq d(x, z) + d(z, y),
+            \]
+            as needed.
+    \end{enumerate}
+\end{proof}
+
 \begin{minorEx}
     Prove that the metrics $\rho$ and $\frac{\rho}{1 + \rho}$ are equivalent.
 \end{minorEx}
+
+\begin{proof}
+    It suffices to show that the function $f : \RR_{+} \to \RR_+$ by
+    $f(x) = \frac{x}{1 + x}$ is a bijection. If $d(x,y) =
+    \frac{\rho(x, y)}{1 + \rho(x, y)}$, and $f$ is bijective, then for
+    each $r \geq 0$ there exists a unique $r' \geq 0$ such that $B_r(x)$
+    with respect to $\rho$ coincides with $B_{r'}(x)$ with respect to
+    $d$. As such, the two topologies coincide.
+    
+    To see that $\frac{x}{1 + x}$ is injective, notice that if $x_1 <
+    x_2$, then
+    \[
+        x_1 + x_1 x_2 < x_2 + x_1 x_2,
+    \]
+    so
+    \[
+        x_1(1 + x_2) < x_2 (1 + x_1),
+    \]
+    and hence
+    \[
+        f(x_1) = \frac{x_1}{1 + x_1} < \frac{x_2}{1 + x_2} = f(x_2).
+    \]
+    Thus, $f$ is injective. To see that $f$ is surjective, let $y \geq
+    0$ be arbitrary. Take $x = \frac{y}{1 - y} \geq 0$, and we have
+    \[
+        f(x) = f\left( \frac{y}{1 - y} \right) =
+        \frac{\frac{y}{1-y}}{1 + \frac{y}{1-y}} = y.
+    \]
+    Thus, $f$ is surjective, and hence $f$ is bijective.
+\end{proof}
