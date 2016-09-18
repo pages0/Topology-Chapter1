@@ -78,7 +78,23 @@ Describe the topological structures induced
   topology of the real line, and thus that $\{n\}$ is in the induced
   topology, and thus as $n$ was arbitrary every element in $\NN$ would
   have in a set in the topology which contains only it, and thus this
-  topology would be the discrete topology.
+  topology would be the discrete topology on $\NN$.
+
+  (2) This topology would be the collection of all set in $\NN$ such
+  of the form $[n, \infty)$ where $n$ is a natural number greater than
+  $0$. We can see this, by seeing that for any $n>0$, $(n-1/2,\infty)$
+  is in the topology of the real line, and that if $n$ is in a set, by
+  the definition of the arrow, all numbers greater than it must be in
+  the set.
+  
+  (3) We see that this would be the discrete topology, as
+  $\emptyset,\{1\},\{2\}, \{1,2\}$ could all individually be included
+    by considering the finite complement of $1$, and $2$, $2$, $1$,
+    and $0$ respectively.
+
+  (4) We see that this would be the topology $\emptyset,\{2\},
+  \{1,2\}$, as if $1$ is in the set, any set in the topology of the
+  arrow would also have $2$ in it.
 \end{proof}
 
 \begin{minorEx}%5.3
@@ -94,6 +110,16 @@ A set $F$ is closed in a subspace $A \subset X$ iff $F$ is the intersection of $
 \begin{minorEx}%5.4
 If a subset of a subspace is open (respectively, closed) in the ambient space, then it also open (respectively, closed) in the subspace.
 \end{minorEx}
+
+\begin{proof}
+  Let $B$ be an arbitrary set in a subspace $(A,\Omega_A)$ of the
+  space $(X,\Omega)$. We will show that $B$is an open in $(X,\Omega)$,
+  that it is open in $(A,\Omega_A)$. We first see that as $B$ is in
+  $(A,\Omega_A)$, that $B \subset A$. As $B$ is open, we know that
+  $B\in \Omega$, and as $B \subset A$, we know that $A\cap B=B$. We
+  now see by the definition of of subspace, that $A\cap B \in
+  \Omega_A$, and thus is an open set, and thus $B$ is an open set.
+\end{proof}
 
 
 
