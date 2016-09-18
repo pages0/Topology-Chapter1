@@ -1,10 +1,58 @@
 \subsection{Topology for a Subset of a Space}
 
 \begin{majorEx}%5.A
-The collection $\Omega_a$ is a topological structure in $A$.
+The collection $\Omega_A$ is a topological structure in $A$.
 \end{majorEx}
 \begin{proof}
-  We first see that as $X\in \Omega$, that $A\cap X \in \Omega_a$
+  We first see that as $X\in \Omega$, that $A\cap X \in \Omega_A$ and
+  thus $A\in \Omega_A$. We also have that as $\emptyset \in \Omega$
+  that $A\cap \emptyset \in \Omega_A$, and thus $\emptyset \in
+  \Omega_A$. As $A,\emptyset \in \Omega_A$, we have that Axiom 3 of a
+  topological space is satisfied.
+
+  We will now show that the union of any collection of sets that are
+  elements of $\Omega_A$ belong to $\Omega_A$. Let $B$ be an arbitrary
+  union of elements of $\Omega_A$. We also let $V\in \Omega$ be defined to be
+  the arbitrary union of all sets $V^\prime$ such that 
+  $A\cap V^\prime \subset B$. As $\Omega$ is a topology, we know that
+  it is closed under arbitrary unions, and thus that $V\in \Omega$. We
+  thus have by the definition of $\Omega_A$ that $A\cap V\in
+  \Omega_A$. We will now show that $B =A\cap V$, 
+  and thus that $B\in \Omega_A$.
+  Let $b\in B$ be arbitrary.
+  We see that by the definition of $B$, that $b\in A$,
+  and for some $V^\prime\subset A$, $b\in V^\prime$.
+  We thus have by the definition of $V$, that $b \in V$, and as $b\in
+  A$, we have that $b \in A \cap V$. As $b$ was arbitrary, we have
+  that $B \subset A \cap V$. We now let $a \in A \cap V$ be
+  arbitrary. We see that $a\in A$, and by the definition of $V$, for
+  some $A\cap V^\prime\subset B$, $a \in A\cap V^\prime$. We thus have
+  that $a \in B$, and as $a$ was arbitrary, and $B \subset A \cap V$,
+  we have that $B = A \cap V$. As $A \cap V$ is in $\Omega_A$, and $B$
+  was an arbitrary union of elements of  $\Omega_A$, we see that
+  $\Omega_A$ is closed under arbitrary union.
+
+  We will now show that $\Omega_A$ is closed under finite
+  intersection. Let $B$ be an arbitrary finite intersection of sets in
+  $\Omega_A$. We also let $V$ be defined such that $V$ is the
+  intersection of every $V^\prime$ such that $A\cap V^\prime$ is an
+  element of the collection of sets whose finite intersection defines
+  $B$. As $\Omega$ is a topological space, we know that $V\in \Omega$,
+  as $\Omega$ is closed under finite intersection. We thus have that
+  $A\cap V \in \Omega_A$, we will now show that $B =A\cap V$, and thus
+  that $B\in \Omega_A$. Let $b \in B$ be arbitrary. We see that by the
+  definition of intersection, that $b \in A$, and that for every
+  $V^\prime$ such that $A\cap V^\prime$ the collection of sets whose
+  finite intersection defines $B$, we have that $a \in V^\prime$. We
+  thus have that by the definition of $V$, $b\in V$, and thus $b \in A
+  \cap V$. As $b$ was arbitarary, we know that $B \subset A \cap
+  V$. We now let $a \in A \cap V$ be arbitrary. We see that for any $A
+  \cap V^\prime$ which defines $B$, that $a \in A$, and by definition
+  of $V$, $a \in V^\prime$. We thus have that by definition of
+  intersection, that $a \in B$, and as $a$ was arbitrary, and 
+  $B \subset A \cap V$, we have that $B = A \cap V$.
+  
+  
 \end{proof}
 
 \begin{majorEx}%5.B
@@ -24,6 +72,14 @@ Describe the topological structures induced
 (3) on the two-element set {1, 2} by the topology of $\RR_T$
 (4) on the same set by the topology of the arrow
 \end{minorEx}
+
+\begin{proof}[Answer]
+  (1) We see that for any $n\in \NN$, that $(n-1/2, n+1/2)$ is in the
+  topology of the real line, and thus that $\{n\}$ is in the induced
+  topology, and thus as $n$ was arbitrary every element in $\NN$ would
+  have in a set in the topology which contains only it, and thus this
+  topology would be the discrete topology.
+\end{proof}
 
 \begin{minorEx}%5.3
 Is the half open interval $[0, 1)$ open in the segment $[0, 2]$, regarded as a subspace of the real line?
