@@ -1,0 +1,18 @@
+\subsection{Distances between Points and Sets}
+
+\begin{majorEx}
+  Let $A$ be a closed set. Prove that $\rho(b,A)=0$ iif $b\in A$
+\end{majorEx}
+
+\begin{proof}
+  We will first show that if $b\in A$, that $\rho(b,A)=0$. As $b\in A$, we see 
+  that $\rho(b,b)$ is in the set $\rho(a,b) | a \in A$. We thus have that 
+  $inf \{ \rho(b,a)| a\in A\}=0$, and thus $\rho(b,A)=0$.
+
+  We now will show that if $\rho(b,A)=0$, that $b\in A$. We assume for sake 
+  of contradiction, that $b \in (X \setminus A)$. We see by $4.E$, 
+  that $b$ is the center of some ball $B_r(b)$ where $r>0$, and $B_r(b)$ is 
+  contained within $(X \setminus A)$. We also see that as $\rho(b,A)=0$, that for any $c>0$, we can find an element of a $a\in A$ such that $\rho(b,a)<c$, and as $r>0$, we have by the definition of an open ball, that $a\in B_r(b)$, however, $B_r(b)$ is in the complement of $A$, and thus we have a contradiction, and know that $b\in A$.
+  
+  As we have proven both directions, we have that $\rho(b,A) =0$ if and only if $b\in A$.
+\end{proof}
