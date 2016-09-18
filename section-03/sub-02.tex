@@ -31,3 +31,11 @@ $x\in A$ by the definition of a union. We thus have that by 1.E that
 $A= U$, and as $U$ was arbitrary, we know that any $U$ can is a union
 of sets in $\Sigma$, and thus $\Sigma$ is a base for the topology.
 \end{proof}
+
+\begin{majorEx}%3.B
+A collection $\Sigma$ of subsets of a set $X$ is a base for a certain topology on $X$ iff $X$ is the union of all sets in $\Sigma$ and
+the intersection of any two sets in $\Sigma$ is the union of some sets in $\Sigma$.
+\end{majorEx}
+First we will prove that if $\Sigma$ is the base for a topology on $X$, $X = \bigcup_(s \in \Sigma) s$ and the intersection of any two sets in $\Sigma$ is the union of some sets in $\Sigma$. First, let $\Omega$ be the topology for which $\Sigma$ is a base. We have that $X \in \Omega$ and, by the definition of base, $X$ must the union of some sets in $\Sigma$. Since every element of each set in $\Sigma$ must be in $X$, $X$ being the union of some sets in $\Sigma$ implies it is the union of all sets in $\Sigma$. Now let $s_1$ and $s_2$ be two sets in $\Sigma$. Because the sets are in $\Sigma$, they are open, and so their intersection is also open. Now we know that their intersection is equal to the union of some open sets in $\Omega$, and since all open sets in $\Omega$ are equal to the union of some open sets in $\Sigma$ by the definition of base, we can replace those open sets with the elements of $\Sigma$ whose union equals them and the intersection of $s_1$ and $s_2$ must be the union of some sets in $\Sigma$.
+Now we prove that if $X = \bigcup_(s \in \Sigma) s$ and the intersection of any two sets in $\Sigma$ is the union of some sets in $\Sigma$, $\Sigma$ is a base for a topology on $X$.
+

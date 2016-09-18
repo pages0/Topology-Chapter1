@@ -83,16 +83,16 @@ Primary Author: Jimin Tan
     To see that Axiom 1 holds, let $\Sigma' \subseteq \Sigma$ be arbitrary. To
     proceed, we observe that $D_r \subseteq D_{r'}$ whenever $r \leq r'$ (and
     equality holding exactly when $r = r'$). Let $f : \Sigma' \to \RR$ be
-    defined by $f(D_r) = r$, and consider $f(\Sigma')$. Either $f(\Sigma')$ is
+    defined by $f(D_r) = r$, and consider the set $R = {r | f(D_r) = r for some D_r \in \Sigma'}$. Either this set is
     bounded above, or it is unbounded. If it is bounded above, we have
     \[
-        s = \sup f(\Sigma').
+        s = \sup R.
     \]
     In this case,
     \[
         \bigcup_{D_r \in \Sigma'} D_r = D_s \in \Sigma.
     \]
-    Otherwise,
+    Otherwise, if we have that $R$ is unbounded, every element in $X$ is contained in $\bipcup_{D_r \in \Sigma'} D_r$. We see this by choosing an arbitrary element $x \in $X$;  $\rho(x, origin)$ = r. If $x \not \in \Sigma'$, it must be the case that $r > R$ by the definition of disk, but this cannot be the case as $R$ is unbounded. No elements in $D_r$ can be outside of $X$, of course, so we have that 
     \[
         \bigcup_{D_r \in \Sigma'} D_r = X \in \Sigma.
     \]
