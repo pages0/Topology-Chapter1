@@ -8,21 +8,115 @@
 \end{minorEx}
 
 \begin{proof}
-  We will first show that $\rho(x,y) =0$ if and only if $x=y$. We see
-  that as $\rho(x,y)= \norm{x-y}$, that $\rho(x,y)=0$ if and only if
-  $x-y=0$, and thus if $x=y$. We thus have that $\rho(x,y) =0$
-  if and only if $x=y$.
+  We will first show that $\rho(x,y) =0$ if and only if $x=y$.Let
+  $x,y\in X$ be arbitrary.
+  We see that as $\rho(x,y)= \norm{x-y}$, that $\rho(x,y)=0$ 
+  if and only if $x-y=0$, and thus if $x=y$. We thus have
+  that $\rho(x,y) =0$ if and only if $x=y$, and as $x,y$ were
+  arbitrary, this is true for all $x,y\in X$.
+
+  We will now show that $\rho(x,y)= \rho(y,x)$. Let $x,y\in X$ be
+  arbitrary. We see that $\rho(x,y)
+  = \norm{x-y}=\norm{({-1})(y-x)}=\norm{y-x}= \rho(y,x)$. As $x,y$
+  were arbitrary, we see that $\rho(x,y)= \rho(y,x)$ for all $x,y$.
+
+  We will now show that $\rho(x,y) \leq \rho(x,z) + \rho(z,y)$ for all
+  $x,y,z \in X$. Let $x,y,z$ be arbitrary. We see that 
+  $\rho(x,y) = \norm{x-y} =
+  \norm{x-z +z -y} \leq \norm{x-z}+\norm{z-y}= \rho(x,z) + \rho(z,y)$.
+  As $x,y,z\in X$ were arbitrary, we see that for any $x,y,z\in X$,
+  that $\rho(x,y) \leq \rho(x,z) + \rho(z,y)$
 \end{proof}
 
-\begin{minorEx}
-    Look through the problems of this section and figure out which of the metric
-    spaces involved are, in fact, normed vector spaces.
+\begin{minorEx}%4.16
+    Look through the problems of this section and figure out which 
+    of the metric spaces involved are, in fact, normed vector spaces.
 \end{minorEx}
 
-\begin{minorEx}
+\begin{proof}[Answer]
+  We will look through the metric spaces defined by $4.A$, $4.B$,
+  $4.C$, $4.1$, $4.2$ and $4.3$ to determine which of the metric
+  spaces defined by these 
+  metrics are normed vector spaces. We will do this, by determining
+  for each metric $\rho$, if $\rho(x,y)= \norm{x-y}$ for some norm.
+  Before examining any specific metric, we
+  see that for any metric space defined as in $4.15$, that 
+  $\rho(x,0)=\norm{x}$, and thus to examine the
+  properties $1$ and $2$ of a norm, we can examine $\rho(x,0)$ for
+  every $x\in X$. We see that as $\rho(x,0)=0$ if and only if $x=0$,
+  that property $1$ will hold for every metric. We also see that if
+  property $2$ of a norm holds, that
+  $\norm{x+y}=\rho(x,-y) \leq \norm{x}+\norm{-y}=\norm{x} + \norm{y}$
+  and thus property $3$ of a norm holds. We thus see that we must only
+  examine property $2$ of a norm to determine if  a metric is defined
+  by a norm as in $4.15$.
+
+  We first examine $\rho$ defined by  $4.A$. We see that $2\cdot\rho(1,0)=1$, and
+  $\rho(2,0)=1$, and thus property $2$ of norms does not hold.
+
+  We now examine  $\rho$ defined by  $4.B$. We see that $|\lambda x|= |\lambda||x|$ by
+  definition of absolute value, and thus that the metric space defined
+  by the metric in $4.B$ is a normed vector space, as absolute value
+  is a norm. 
+
+  We now examine $\rho$ defined by $4.C$. We let $x \in \RR^n$ be arbitrary for an
+  arbitrary $n$. We see that for an arbitrary $\lambda \in \RR$
+  $\rho(\lambda x,0) = \sqrt{\Sigma_{i=1}^n (\lambda x_i)^2 }=
+  \sqrt{\Sigma_{i=1}^n \lambda^2 x_i^2 }=
+  \sqrt{\lambda^2 \Sigma_{i=1}^n x_i^2 } =
+  \lambda \sqrt{\Sigma_{i=1}^n x_i^2 }= |\lambda|\rho(x,0)$. As $x$,
+  $n$ and $\lambda$ were arbitrary, we have that 
+  property $2$ of a norm holds, and as $\rho$ is a metric, we know that
+  the metric space defined by $\rho$ is a normed vector space.
+
+  We now examine $\rho$ defined by $4.1$. 
+  We let $x\in \RR^n$ be arbitrary for an arbitrary $n$. We see that 
+  for an arbitrary $\lambda \in \RR$, $\rho(\lambda x,0)=
+  max_{i=1,...,n} |\lambda x_i| =
+  max_{i=1,...,n} |\lambda| | x_i|=
+  |\lambda| max_{i=1,...,n} | x_i|=
+  |\lambda| \rho(x,0)$. As $x$  $n$ and $\lambda$ were arbitrary,
+  we have that property $2$ of a norm holds, and as $\rho$ is a
+  metric, we know that the metric space defined by $\rho$ is a normed
+  vector space. 
+
+  We now examine $\rho$ defined by $4.2$. 
+  We let $x\in \RR^n$ be arbitrary for an arbitrary $n$. We see that 
+  for an arbitrary $\lambda \in \RR$, $\rho(\lambda x,0)=
+  \Sigma_{i=1}^n|\lambda x_i| =
+  \Sigma_{i=1}^n |\lambda| | x_i|=
+  |\lambda| \Sigma_{i=1}^n | x_i|=
+  |\lambda| \rho(x,0)$. As $x$  $n$ and $\lambda$ were arbitrary,
+  we have that property $2$ of a norm holds, and as $\rho$ is a
+  metric, we know that the metric space defined by $\rho$ is a normed
+  vector space. 
+
+  We now examine $\rho$ defined by $4.3$. 
+  We let $p\in \NN$ and $x\in \RR^n$ be arbitrary
+  for an arbitrary $n$. We see that 
+  for an arbitrary $\lambda \in \RR$, $\rho(\lambda x,0)=
+  (\Sigma_{i=1}^n |\lambda x_i|^p)^{1/p} =
+  (\Sigma_{i=1}^n |\lambda|^p |x_i|^p)^{1/p} =
+ ( |\lambda|^p|\Sigma_{i=1}^n |x_i|^p)^{1/p} =
+ ( |\lambda|^p)^{1/p}(\Sigma_{i=1}^n |\lambda x_i|^p)^{1/p} =
+  |\lambda| \rho(x,0)$. As $x$,$p$, $n$ and $\lambda$ were arbitrary,
+  we have that property $2$ of a norm holds, and as $\rho$ is a
+  metric, we know that the metric space defined by $\rho$ is a normed
+  vector space. 
+\end{proof}
+
+\begin{minorEx}%4.17
     Prove that every ball in a normed space is a convex set symmetric with
     respect to the center of the ball.
 \end{minorEx}
+
+\begin{proof}
+  We first let $B_r(a)$ be an arbitary ball in a normed space. We will
+  first show that it is a convex set, and thus if $x,y\in B_r(a)$,
+  that for any $z$ such that $\rho(x,z)+\rho(z,y)=\rho(x,y)$
+  that $z\in B_r(a)$. Let $x,y\in B_r(a)$ be arbitrary, and let $z$
+  such that $\rho(x,z)+\rho(z,y)=\rho(x,y)$ be arbitrary
+\end{proof}
 
 \begin{minorEx}
     Prove that every convex closed bounded set in $\RR^n$ that has a center of

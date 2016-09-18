@@ -1,14 +1,53 @@
 \subsection{Metrizable Topological Space}
 
-\begin{majorEx}
+\begin{majorEx}%4.J
     An indiscrete space is not metrizable if it is not a singleton (otherwise,
     it has too few open sets).
 \end{majorEx}
 
-\begin{majorEx}
+\begin{proof}
+   Let $X$ be an arbitary nonempty indiscrete space.
+   We will show that if $X$ metrizable by some metric $\rho$, that it
+   is a singleton. Let $a,b \in X$ be arbitrary. We see that if
+   $\rho(a,b)>0$, that $b \notin B_{\rho(a,b)}(a)$, and $a \notin
+   B_{\rho(a,b)}(a)$, and as $a \in B_{\rho(a,b)}(a)$, and $b \in
+   B_{\rho(a,b)}(b)$, we would have that $B_{\rho(a,b)}(a)\neq
+   B_{\rho(a,b)}(b)\neq \emptyset$, and thus there would be three sets
+   in the topology. We thus have that $\rho(a,b)=0$, and thus that
+   $a=b$. As $a,b$ were arbitrary, we see that there is only one
+   element in $X$, and thus that $X$ is a singleton.
+\end{proof}
+
+\begin{majorEx}%4.K
     A finite space $X$ is metrizable iff it is discrete.
 \end{majorEx}
 
-\begin{minorEx}
+\begin{proof}
+  Let $X$ be an arbitrary finite Topological space. Suppose $X$ is
+  discrete. We would then see that the metric $4.A$ would generate it,
+  by $4.19$. Now suppose that $X$ is metrizable for some metric
+  $\rho$. Let $a\in X$ be 
+  arbitrary such that $a$. We see that as $X$ is a finite set, that
+  $B_r(a)$ where $r = inf (\rho(a,b)| b\neq a, b\in X )$ is in the
+  metric topology of $X$, and will only contain $a$ by the definition
+  of an open ball. As $a$ was arbitrary, we see that every individual
+  element of $X$ has a set which contains only it in the topology, and
+  thus we see that $X$ is discrete, as any supset of $X$ can be made
+  from the union of individual elements.
+\end{proof}
+
+
+\begin{minorEx}%4.25
     Which of the topological spaces described in Section 2 are metrizable?
 \end{minorEx}
+
+
+\begin{proof}[Answers]
+  To determine this, we will examine the topological spaces described
+  in 2.1, 2.3, 2.C , 2.6.
+
+  We first see that if $\rho(x,y)$ is defined on the positive reals
+
+  We see that as 2.3 is finite, we know by $4.K$ that it is
+  metrizable, with the metric described in $4.A$.
+\end{proof}
