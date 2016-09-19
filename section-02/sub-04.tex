@@ -71,13 +71,20 @@ Primary Author: Jimin Tan
     finite set. Then
     \begin{align*}
         \bigcap_{A \in S} A &= \bigcap_{U \in f(S)} U \cup \set{a} \\
-        &= \set{a} \cup \left( \bigcup_{U \in f(S)} U \right).
+        &= \set{a} \cup \left( \bigcap_{U \in f(S)} U \right).
     \end{align*}
     Since $\Omega$ is a topology, there is a $V \in \Omega$ such that
     \[
         V = \bigcap_{U \in f(S)} U.
     \]
+    Hence,
+    \[
+        \bigcap_{A \in S} A = \set{a} \cup V,
+    \]
+    which is by definition an element of $\Omega'$. This verifies Axiom 2.
   \end{proof}
+
+  Primary author: David Kraemer
 
 \begin{minorEx} % 2.7
   Is the set $\{ \emptyset, \{ 0 \}, \{0,1\} \}$ a topological

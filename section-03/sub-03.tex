@@ -18,8 +18,24 @@
     edges of $\sigma_1 \cap \sigma_2$ of length $w$, we claim that $B_w(c_1)
     \cup B_w(c_2) = \sigma_1 \cap \sigma_2$.
 
-    If $x \in \sigma_1 \cap \sigma_2$, then 
-\end{proof}<++>
+    If $x \in \sigma_1 \cap \sigma_2$, then
+
+
+    Let $\sigma_1, \sigma_2 \in \Sigma^1$. Then $\sigma_1 \cap \sigma_2$ is a
+    rectangle with width $w$ and length $\ell$. Without loss of generality,
+    assume $w \leq \ell$. Let $c_1$ denote the point for which $B_w(c_1)$
+    is a square of length $w$ which corresponds to one of the sides of $\sigma_1
+    \cap \sigma_2$, and let $c_2$ denote the other point. If $c_1 = c_2$, we are
+    done, since the side of $B_w(c_1)$ corresponding with $\sigma_1 \cap
+    \sigma_2$ would also correspond to the other side, and so would $B_w(c_2)$. 
+    If not, take
+    \[
+        U = \bigcup_{\lambda \in [0,1]} B_w(\lambda c_1 + (1 - \lambda) c_2)
+    \]
+    as the union, which is a series of identical squares centered on the line
+    segment between $c_1$ and $c_2$. Then if $x \in \sigma_1 \cap \sigma_2$, $x$
+    is some 
+\end{proof}
 
 \begin{minorEx}%3.7
   Prove that each of the collections $\Sigma^2$,$\Sigma^\infty$, and
