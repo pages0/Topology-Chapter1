@@ -46,8 +46,25 @@
   To determine this, we will examine the topological spaces described
   in 2.1, 2.3, 2.C , 2.6.
 
-  We first see that if $\rho(x,y)$ is defined on the positive reals
+  We first assume that there is a metric $\rho$ such that the
+  topological space in $2.1$ is induced by it. We see that in the
+  arrow topology, that if $1$ is in a set, that $2$ is also in a set,
+  however, we see that as $1\neq 2$, that $\rho(1,2)>0$, and thus
+  $\B_{\rho(1,2)}(1)$ contains $1$, but not $2$ we thus have a
+  contradiction and see that $2.1$ is not metrizable.
 
   We see that as 2.3 is finite, we know by $4.K$ that it is
   metrizable, with the metric described in $4.A$.
+
+  We see by $4.H$ that the topological space described by $2.C$ is
+  metrizable.
+
+  We now assume a metric $\rho$ such that the
+  topological space in $2.6$ is induced by it. We see for some point
+  $a$, $a$ is in every set. However, we see that if for some $b$,
+  $\rho(a,b)>0$, that there is a set $B_{\rho(a,b)}(b)$ which does not
+  contain $b$, but which is not the empty set. We also see that as
+  $2.6$ is obtained by adding  a point to a topology, that there must
+  be at least one point $b \neq a$, and thus we have a contradiction,
+  and the topological space in $2.6$ is not metrizable.
 \end{proof}
