@@ -1,6 +1,27 @@
 \subsection{Topology and Arithmetic Progressions}
 
+\begin{majorEx}
+2.Lx*. Consider the following property of a subset F of the set N of positive
+integers: there is n ∈ N such that F contains no arithmetic progressions of
+length n. Prove that subsets with this property together with the whole N
+form a collection of closed subsets in some topology on N.
+\end{majorEx}
+\begin{proof}
+To show this, we show that following 3 properties hold:
+(1) $F$ is closed under arbitrary intersections
+(2) $F$ is closed under finite unions
+(3) $\emptyset$ and $\NN$ are elements of $F$
 
+First, $\emptyset$ and $\NN$ are elements. $\NN$ is added artificially and $\emptyset$ is trivially in $F$, so the third property holds.
+
+Second, consider an arbitrary union of elements in $F$, \bigcap f_1, f_2, …$. Let $n_1, n_2, …$ be the values satisfying the property in the statement of the problem. If $\bipcap f_1, f_2, …$ contains an arithmetic progression of length n, it must be the case that each $f_i$ contains an arithmetic progression of length n as well, since $\bigcap f_1, f_2, … \subseteq f_i$ for all $f_i$. Then we can just choose any $n_i$ and $\bigcap f_1, f_2, …$ cannot contain any arithmetic progressions of length n, i.e. the first property holds.
+
+Now consider a finite union of elements in $F$, \bigcup f_1, f_2, …, f_n$, where $n_1, n_2, …, n_m$ are the values satisfying the property in the statement of the problem. Because of the properties of unions, if we prove $f_1 \cup f_2$ is in $F$, we know that $\bigcup f_1, f_2, …, f_n$ are in $F$, since all $f_i$ are arbitrary. Let $N$ equal the value given by Van der Waerden’s Theorem with $n = max(n_1, n_2)$. Assume that $f_1 \cup f_2$ contains an arithmetic progression of length $N$. This arithmetic progression must be in the form ${mx + b | x \in {0, 1, …, N -1}$. Let $S = {x \in {0, 1, …, N -1} | mx + b \in f_1}$ and let $S’ = {0, 1, …, N - 1} \setminus S$. By Wan der Waerden’s theorem, it must be the case that either $S$ or $S’$ contains an arithmetic progression of length $max(n_1, n_2)$. Because of the way we constructed $S$ and $S’$, if $S$ contains an arithmetic progression of length $N$, it must be that $f_1$ contains an arithmetic progression of length $N$, and the same is true for $S’$ and $f_2$. So we can rephrase this as either $f_1$ or $f_2$ must contain an arithmetic progression of length $max(n_1, n_2)$. Since $max(n_1, n_2) \geq n_1$ and $max(n_1, n_2) \geq n_2$, this is not possible and our assumption that $f_1 \cup f_2$ contains an arithmetic progression of length $N$ must be incorrect. Then the second property holds.
+
+Since the three properties hold, we know this collection is a collection of closed sets.
+
+Primary author: Willie Kaufman
+\end{proof}
 
 
 \begin{majorEx}
@@ -51,3 +72,4 @@
   can find that there must be a contradiction, but i'm not sure how.
 \end{proof}
 
+Primary author: Reilly Noonan Grant

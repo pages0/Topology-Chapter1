@@ -146,3 +146,61 @@
     unit ball with respect to a certain norm, which is uniquely determined by
     this ball.
 \end{minorEx}
+
+\begin{proof}
+    Let $S$ be a convex closed bounded set in $\RR^n$ with center $c$. We define
+    the set operations
+    \[
+        \alpha \cdot S = \alpha S = \set{\alpha x : x \in S},
+    \]
+    and
+    \[
+        S + y = \set{x + y : x \in S}.
+    \]
+    We see that $x \in S$ if and only if $\alpha x \in \alpha S$, and $x \in S$
+    if and only if $x + y \in S + y$. Let $\norm{\cdot} : \RR^n
+    \to \RR_{+}$ be defined by
+    \[
+        \norm{y} = \inf \set{\lambda : y \in \lambda (S - c)}.
+    \]
+    It follows that $\norm{y} = 0$ exactly when $y = 0$, since for every
+    $\lambda > 0$, $c \in \lambda S$. To see that
+    \[
+        \norm{\alpha y} = \abs{\alpha} \norm{y},
+    \]
+    it suffices to show that 
+    \[
+        A = \set{\lambda : \alpha x \in \lambda (S - c)} =
+        \abs{\alpha} \set{\lambda : x \in \lambda (S - c)} = B.
+    \]
+    It would then follow that the infimum of one set is the infimum of the
+    other, arriving at our claim. But $\lambda \in A$ if and only if $\alpha x \in
+    \lambda(S - c)$, which holds if and only if $\lambda \in \alpha \set{\lambda
+        : x \in \lambda (S - c)} = b$, as needed.
+
+    Finally, to see the triangle inequality holds, it suffices to show that 
+    \[
+        \frac{x + y}{\norm{x} + \norm{y}} \in S - c,
+    \]
+    since this establishes that
+    \[
+        \frac{\norm{x + y}}{\norm{x} + \norm{y}} \leq 1,
+    \]
+    proving the claim. Since $S-c$ is convex, we have
+    \[
+        \frac{\norm{x}}{\norm{x} + \norm{y}} (S - c) + 
+        \frac{\norm{y}}{\norm{x} + \norm{y}} (S - c) = 
+        S - c.
+    \]
+    Since $\norm{x} \leq \norm{x} + \norm{y}$, we have $\frac{x}{\norm{x} +
+    \norm{y}} \in S - c$. Similarly, we have $\frac{y}{\norm{x} + \norm{y}} \in
+    S - c$. By the convexity of $S - c$, we conclude that 
+    \[
+        \frac{x + y}{\norm{x} + \norm{y}} \in S - c,
+    \]
+    which allows us to deduce that
+    \[
+        \frac{\norm{x + y}}{\norm{x} + \norm{y}} \leq 1,
+    \]
+    giving the desired result.
+\end{proof}
