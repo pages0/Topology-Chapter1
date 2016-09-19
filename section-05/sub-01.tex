@@ -59,11 +59,18 @@ The collection $\Omega_A$ is a topological structure in $A$.
 The canonical topology on $\RR^1$ coincides with the topology induced on $\RR^1$ as a subspace of $\RR^2$.
 \end{majorEx}
 \begin{proof}
+Let $\Omega$ be the canonical topology on $\RR^1$. Let $\Sigma$ be the canonical topology on $\RR^2$
+and let $\sigma \in \Sigma$ be arbitrary. Let $R$ be the set ${x | x \in \RR^2 and x = (R, 0) for some R \in \RR}$. Consider the set $S = {R \cap \sigma}$. Each ball that forms $\sigma$ intersects $R$ for some open interval, so $S$ will be the union of open intervals, and so will be in the canonical topology on $\RR^1$. We can also reverse engineer a $\sigma$ that generates an arbitrary $\omega \in \Omega$ by choosing an appropriate ball for each open interval, the union of which form $\omega$, so there are no elements $\omega \in \Omega$ that are not induced by considering $\RR^1$ as a subspace of $\RR^2$, and so the sets $\Omega$ and $\Sigma_R$ are equivalent.
 \end{proof}
+
+Primary author: Willie Kaufman
 
 \begin{minorEx}[Riddle]%5.1
 How to construct a base for at topology induced on $A$ by using a base for the topology on $X$.
 \end{minorEx}
+If $\Sigma$ is a base for the topology on $X$, the set ${A \cap \sigma | \sigma \in \Sigma}$ forms a base for $A$. 
+
+Primary author: Willie Kaufman
 
 \begin{minorEx}%5.2
 Describe the topological structures induced

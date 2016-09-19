@@ -1,1 +1,75 @@
 \subsection{Topology and Arithmetic Progressions}
+
+\begin{majorEx}
+2.Lx*. Consider the following property of a subset F of the set N of positive
+integers: there is n ∈ N such that F contains no arithmetic progressions of
+length n. Prove that subsets with this property together with the whole N
+form a collection of closed subsets in some topology on N.
+\end{majorEx}
+\begin{proof}
+To show this, we show that following 3 properties hold:
+(1) $F$ is closed under arbitrary intersections
+(2) $F$ is closed under finite unions
+(3) $\emptyset$ and $\NN$ are elements of $F$
+
+First, $\emptyset$ and $\NN$ are elements. $\NN$ is added artificially and $\emptyset$ is trivially in $F$, so the third property holds.
+
+Second, consider an arbitrary union of elements in $F$, \bigcap f_1, f_2, …$. Let $n_1, n_2, …$ be the values satisfying the property in the statement of the problem. If $\bipcap f_1, f_2, …$ contains an arithmetic progression of length n, it must be the case that each $f_i$ contains an arithmetic progression of length n as well, since $\bigcap f_1, f_2, … \subseteq f_i$ for all $f_i$. Then we can just choose any $n_i$ and $\bigcap f_1, f_2, …$ cannot contain any arithmetic progressions of length n, i.e. the first property holds.
+
+Now consider a finite union of elements in $F$, \bigcup f_1, f_2, …, f_n$, where $n_1, n_2, …, n_m$ are the values satisfying the property in the statement of the problem. Because of the properties of unions, if we prove $f_1 \cup f_2$ is in $F$, we know that $\bigcup f_1, f_2, …, f_n$ are in $F$, since all $f_i$ are arbitrary. Let $N$ equal the value given by Van der Waerden’s Theorem with $n = max(n_1, n_2)$. Assume that $f_1 \cup f_2$ contains an arithmetic progression of length $N$. This arithmetic progression must be in the form ${mx + b | x \in {0, 1, …, N -1}$. Let $S = {x \in {0, 1, …, N -1} | mx + b \in f_1}$ and let $S’ = {0, 1, …, N - 1} \setminus S$. By Wan der Waerden’s theorem, it must be the case that either $S$ or $S’$ contains an arithmetic progression of length $max(n_1, n_2)$. Because of the way we constructed $S$ and $S’$, if $S$ contains an arithmetic progression of length $N$, it must be that $f_1$ contains an arithmetic progression of length $N$, and the same is true for $S’$ and $f_2$. So we can rephrase this as either $f_1$ or $f_2$ must contain an arithmetic progression of length $max(n_1, n_2)$. Since $max(n_1, n_2) \geq n_1$ and $max(n_1, n_2) \geq n_2$, this is not possible and our assumption that $f_1 \cup f_2$ contains an arithmetic progression of length $N$ must be incorrect. Then the second property holds.
+
+Since the three properties hold, we know this collection is a collection of closed sets.
+
+Primary author: Willie Kaufman
+\end{proof}
+
+
+\begin{majorEx}
+  For every $n \in \NN$, there is an $N \in \NN$ such that for any
+  subset $A \subset \{1,2,...,N\}$, either $A$ or $\{1,2,...,N\}
+  \setminus A$ contains an arithmetic progression of length $n$
+\end{majorEx}
+
+\begin{proof}
+  We first examine the case where $n=1$. We see that if we choose $N$
+  to be $3$, that either $A$ or it's complement must have a set with
+  $2$ elements, and those two elements form a arithmetic progression
+  of length $1$.
+
+  We now examine the case where $n=2$. We choose $N$ to
+  be $9$. We assume for sake of contradiction, that neither $A$ nor 
+  $\{1,2,...,N\} \setminus A$ contains an arithmetic progression 
+  of length $2$. 
+
+  We define the concept of a run, as a collection of adjacent
+  integers. We see that in this context, there cannot be a run of
+  $3$. $2$ runs cannot be adjacent, as in that case they would only be
+  one run.
+
+  We first see that $|A|\geq 3$, as otherwise, there
+  would be some run of $3$ numbers in the complement which 
+  are all adjacent, and thus an
+  arithmetic progression of length $2$. A similar statement holds for
+  $A$'s complement. We now consider the possible
+  runs in $A$. We see that there are at least $2$ runs in a $A$, and
+  its complement, as a run is less than $3$, and we know that $|A|\geq
+  3$. We consider the case were there are only $2$ runs in $A$. 
+  We see that these runs couldn't cover $1$ or $9$, as otherwise,
+  there would be a run of $3$ in the complement, as one run cannot
+  split $7$ or $8$ up into entirely runs less than $3$. We also see
+  that a run cannot cover $5$, as otherwise, the side that the other
+  run isn't on would have a run of $3$. We see that $1,5,9$ form an
+  arithmetic progression, and thus that $A$ and its complement must
+  each have $3$ or more runs. We also see that $A$ and its complement
+  must not have $3$ runs which are $2$ long, as they would either
+  cover either $(1,2)$, $(4,5)$ and $(7,8)$, or $(2,3)$, $(5,6)$ and
+  $(8,9)$, and 2,5,7 and 3,6,9 are progressions. We also see that $A$
+  and its complement must have less than $5$ runs, as the only way to
+  have $5$ runs is $1,3,5,7,9$, and these are each $2$ apart. We thus
+  have the there are either $3$ or $4$ runs. We now see that as
+  $1,5,9$ is an arithmetic progression, that without loss of
+  generality, $A$ must contain a run with one of these. From here, we
+  can find that there must be a contradiction, but i'm not sure how.
+\end{proof}
+
+Primary author: Reilly Noonan Grant

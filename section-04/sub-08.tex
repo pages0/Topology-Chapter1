@@ -113,9 +113,31 @@
 \begin{proof}
   We first let $B_r(a)$ be an arbitary ball in a normed space. We will
   first show that it is a convex set, and thus if $x,y\in B_r(a)$,
-  that for any $z$ such that $\rho(x,z)+\rho(z,y)=\rho(x,y)$
+  that for any $z$ which is in the segment bettween $x$ and $y$
   that $z\in B_r(a)$. Let $x,y\in B_r(a)$ be arbitrary, and let $z$
-  such that $\rho(x,z)+\rho(z,y)=\rho(x,y)$ be arbitrary
+  such that $\rho(x,z)+\rho(z,y)=\rho(x,y)$ be arbitrary. We see that
+  $z= \lambda x + (1-\lamba)y$ for some $\lambda \in (0,1)$, by
+  definition of a segment in a vector space. We see that 
+  $\norm{z-a} = \norm{\lambda x + (1-\lambda)y - a} = \norm{\lambda
+    x+ (1-\lambda)y + \lambda a + (1-\lambda) a} \leq
+  \lambda\norm{x-a} + (1-\lambda)\norm{y-a}< \lambda r + (1-\lambda)r
+  = r$. We thus have that $\rho(a,z)< r$, and thus that $z\in B_r(a)$,
+  and thus that $B_r(a)$ is convex. As $B_r(a)$ was arbitrary, we know
+  that every ball in a normed space is a convex set.
+
+  We will now show that every ball in a normed space is 
+  symmetric with respect to the center of the ball.  Let $B_r(a)$ be
+  an arbitary ball in a normed space. We will show that for any $x \in
+  B_r(a)$, that the vector reflected around $a$, $2a -x$ is in
+  $B_r(a)$. 
+  We see that $\rho(2a-x,a)= \norm{2a-x -a} = \norm{a-x}=\rho(x,a)<r$,
+  and thus $2a -x\in B_r(a)$. As $B_r(a)$ was arbitrary, we know that 
+   every ball in a normed space is symmetric with respect to the
+   center of the ball. 
+
+   As we have proven all properties, we see that every ball in a
+   normed space is a convex set symmetric with respect to the center
+   of the ball.
 \end{proof}
 
 \begin{minorEx}
