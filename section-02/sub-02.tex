@@ -54,9 +54,20 @@ Primary author: Reilly Noonan Grant
     To see that $\Omega_I$ is closed under arbitrary unions, let $\Omega_I'
     \subseteq \Omega_I$ be arbitrary. Then since $A \cup A = A$ and since 
     \[
-        \bigcup_{A \in \Omega_I'} A
+         \bigcup_{A \in \Omega_I'} A
     \]
+    is either $X$ itself or empty, we see that unions are closed in $\Omega$, so
+    Axiom 2 is satisfied.
+
+    To see that $\Omega_I$ is closed under finite intersections, let $\Omega_I'
+    \subseteq \Omega_I$ be finite. Then either $\Omega_I'$ is the entire
+    topology, it is the set containing $X$, it is the set containing
+    $\emptyset$, or it is itself empty. Since $X \cap \emptyset = \emptyset$,
+    any possible intersection of sets in $\Omega_I'$ is contained in $\Omega_I$.
+    Hence, we see that finite intersections are closed in $\Omega$, so Axiom 2
+    is satisfied.
 \end{proof}
+Primary author: David Kraemer
 
 \begin{minorEx} %2.1
     Let $X$ be the ray $[0, +\infty)$, and let $\Omega$ consist of $\emptyset$, %]
