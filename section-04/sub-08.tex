@@ -192,4 +192,15 @@
         \frac{\norm{y}}{\norm{x} + \norm{y}} (S - c) = 
         S - c.
     \]
+    Since $\norm{x} \leq \norm{x} + \norm{y}$, we have $\frac{x}{\norm{x} +
+    \norm{y}} \in S - c$. Similarly, we have $\frac{y}{\norm{x} + \norm{y}} \in
+    S - c$. By the convexity of $S - c$, we conclude that 
+    \[
+        \frac{x + y}{\norm{x} + \norm{y}} \in S - c,
+    \]
+    which allows us to deduce that
+    \[
+        \frac{\norm{x + y}}{\norm{x} + \norm{y}} \leq 1,
+    \]
+    giving the desired result.
 \end{proof}
