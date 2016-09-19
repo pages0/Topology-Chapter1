@@ -48,8 +48,30 @@ Closed sets of a closed subspace are closed in the ambient space.
 Primary Author: Reilly Noonan Grant
 
 \begin{minorEx}%5.5
-Prove that a set $U$ is open in $X$ iff each point in $U$ has a neighborhood $V$ in $X$ such that $U \cap B$ is open in $V$.
+Prove that a set $U$ is open in $X$ iff each point in $U$ has a neighborhood $V$ in $X$ such that $U \cap V$ is open in $V$.
 \end{minorEx}
+
+\begin{proof}
+  We will first show that if a set $U$ is open in $X$, that every
+  point in $U$ has a neighborhood $V$ in $X$ such that $U \cap V$ is
+  open in $V$. Let $x \in U$ be arbitrary. As $U$is open, we know that
+  $U$ is a neighborhood of $x$, and by definition of a subspace, we
+  know that $U\cap U=U$ is open in $U$.
+
+  We will now show that if every point in $U$ has a neighborhood $V$
+  in $X$ such that $U \cap V$ is open in $V$, that $U$ is open in
+  $X$. Let $x \in U$ be arbitrary. We see that $U \cap V \subset
+  U$. We also see that as $V$ is a neighborhood, that $V$ is open, and
+  thus as $U \cap V $ is open in $V$, by 5.E, we have that $U \cap V$
+  is open in $X$. As $x$ was arbitrary, we have that every point in
+  $U$ is contained within an open set contained within $U$. We thus
+  see that if we take the union of all these set $A$, that $U\subset
+  A$, as $A$ contains all points in $U$, and $A \subset U$ as every
+  set is contained within $U$. We thus have that $U=A$, and as $A$ is
+  an arbitrary collection of open sets, we have that $A$ and thus $U$
+  is open.
+\end{proof}
+
 
 \begin{minorEx}%5.6
 Show that the property of being closed is not local.
