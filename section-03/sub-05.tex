@@ -1,1 +1,53 @@
 \subsection{Infiniteness of the Set of Prime Numbers}
+
+\begin{minorEx}
+    Prove that all (infinite) arithmetic progressions consisting of positive
+    integers form a base for some topology on $\NN$.
+\end{minorEx}
+
+\begin{proof}
+    Denote $AP(c,k)$ the arithmetic progression starting at $c$ with increment
+    $k$. We have $AP(1,1) = \NN$. Moreover, $AP(1,2) \cap AP(1,3) = \emptyset$,
+    so both $\NN$ and $\emptyset$ are open sets, verifying axiom 3.
+
+    Let 
+    \[
+        U = \bigcap_{B \in \Omega'} B
+    \]
+    be an arbitrary union of open sets. Let $x \in U$ be arbitrary; hence there
+    is some $B$ such that $x \in B$. But then any $c \in \NN$ such that $AP(x,
+    c) \subseteq B$ establishes that $AP(x, c) \subseteq U$. Thus $U$ is open.
+
+    Now, let
+    \[
+        U = B_1 \cap B_2
+    \]
+    be an intersection of two open sets with $u \in U$ fixed. Then if $x_1 \in
+    B_1$ and $x_2 \in B_2$, we can let $x = \lcm(x_1, x_2)$, and it follows that
+    $AP(u,x) \subseteq B_1$ and $AP(u,x) \subseteq B_2)$. Hence, $AP(u, x)
+    \subseteq U$, so $U$ is open.
+\end{proof}
+
+\begin{minorEx}
+    Using this topology, prove that the set of all prime numbers is infinite.
+\end{minorEx}
+
+\begin{proof}
+    Let $P$ denote the set of prime numbers, and suppose $P$ is finite. Now,
+    because each nonempty $U \in \Omega$ contains an arithmetic progression,
+    every nonempty open set is infinite. Each $AP(c,k)$ is open, since the
+    arithmetic progressions all form a base for $\Omega$. In addition, since
+    \[
+        AP(c, k) = \NN \setminus \left( AP(c+1,k) \cup AP(c+2, k) \cup \cdots
+        \cup AP(c+k-1, k) \right),
+    \]
+    each arithmetic progression is also closed. For each $n > 1$, $n$ can be
+    expressed as some multiple of a prime number; hence,
+    \[
+        \bigcup_{p \in P} AP(p,p) = \NN \setminus \set{1}.
+    \]
+    Now, since $AP(p,p)$ is closed, and $P$ is finite, we have that $\bigcup_{p
+    \in P} AP(p,p)$ is closed; hence, $\NN\setminus\set{1}$ is closed. But this
+    implies that $\set{1}$ is open, which contradicts our observation that
+    nonempty open sets are infinite. Hence, $P$ must be infinite.
+\end{proof}
