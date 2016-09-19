@@ -55,6 +55,21 @@ Prove that a set $U$ is open in $X$ iff each point in $U$ has a neighborhood $V$
 Show that the property of being closed is not local.
 \end{minorEx}
 
+\begin{proof}
+    We will show that there is a closed set $F$ such that for every open
+    neighborhood $V$ around $x \in F$ the set $F \cap V$ is not closed with
+    respect to $V$.
+
+    In particular, if $F=[0,1]$, then any neighborhood containing $V$ can be
+    written as a union of open intervals; it suffices to show that any open
+    interval containing $0$ is fails. Let $a < 0 < b < 1$ and consider $(a,b)$.
+    Then $(a,b) \cap [0, 1] = [0, b)$. But $[0, b)$ is not closed, since its
+        complement is not open. Hence, for any open interval $V$ containing 0,
+        $F \cap V$ is not closed.
+\end{proof}
+
+Primary author: David Kraemer
+
 \begin{majorEx}%5.G
 Let $(X, \Omega)$ be a topological space, $X \supset A \supset B$. Then $(\Omega_A)_B=\Omega_B$, i.e., the topology induced on $B$ by the relative topology of $A$ coincides with the topology induced on $B$ directly from $X$.
 \end{majorEx}
