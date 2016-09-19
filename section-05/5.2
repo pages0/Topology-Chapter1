@@ -5,6 +5,8 @@ The unique open set in $\mathds{R}^1$ which is also open in $\mathds{R}^2$ is $\
 In order for a set $X \in \RR^2$ to be open, it must be the union of open balls. Any open ball in $\RR^2$ will contain some values that do not fit the form $(x, 0)$ for some $x \in \RR$, so it is not possible for a union of open balls to be exlusively values in $\RR$. $\emptyset$ is trivially open in both $\RR$ and $\RR^2$, so it is the unique set that is open in both. 
 \end{proof}
 
+Primary author: Willie Kaufman
+
 \begin{majorEx}%5.E
 An open set of an open subspace is open in the ambient space, i.e., if $A \in \Omega$, then $\Omega_A \subset \Omega$.
 \end{majorEx}
@@ -12,11 +14,16 @@ An open set of an open subspace is open in the ambient space, i.e., if $A \in \O
 Let $A \in \Omega$ be arbitrary. $/Omega_A = {A \cap \omega | \omega \in \Omega}$. $A \cap \omega$ is open, since both $A$ and $\omega$ are open. Then each element of $Omega_A$ is open, i.e. $\Omega_A \subset \Omega$.
 \end{proof}
 
+Primary author: Willie Kaufman
+
 begin{majorEx}%5.F
 Closed sets of a closed subspace are closed in the ambient space.
 \end{majorEx}
 \begin{proof}
+Let $A \subset X$ be a closed set and let $a \subset A$ be a closed set. Then it follows from the definition of $\Omega_A$ that there exists a closed set $C$ in $X$ such that $C \cap A = a$. We then have that $a$ is equal to the intersection of two closed subsets of $A$ - one of which is $A$ itself - and so is closed itself.
 \end{proof}
+
+Primary author: Willie Kaufman
 
 \begin{minorEx}%5.5
 Prove that a set $U$ is open in $X$ iff each point in $U$ has a neighborhood $V$ in $X$ such that $U \cap B$ is open in $V$.
