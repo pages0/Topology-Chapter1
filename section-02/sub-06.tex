@@ -70,4 +70,54 @@ $$X \setminus \bigcap_{A \in \Gamma} A = \bigcup_{A\in\Gamma} (X \setminus A) $$
     [Riddle]
     Find such a formulation.
 \end{minorEx}
-The discrete topology contains each set and their complements, unions, and intersections.
+\begin{proof}[Answer]
+  We will first show that $(\bigcup_{A \in \Gamma} A ) \cup
+  \bigcap_{A \in\Gamma}(X \setminus A) = X$.  Let 
+  $x \in (\bigcup_{A \in \Gamma} A ) \cup
+  \bigcap_{A \in\Gamma}(X \setminus A)$. We see as each $A$ is a
+  subset of $X$, and $X\setminus A \subset X$, that $x\in X$, and thus 
+  $(\bigcup_{A \in \Gamma} A ) \cup
+  \bigcap_{A \in\Gamma}(X \setminus A) \subset X$. Now let $a \in X$
+  be arbitrary. We see that if $a \notin (\bigcup_{A \in \Gamma} A )$,
+  that for any $A$, $a \notin A$, and thus $a \in X \setminus A$. We
+  thus have that $a\in \bigcap_{A \in\Gamma}(X \setminus A)$ by
+  definition of intersection, and thus $a\in (\bigcup_{A \in \Gamma} A ) \cup
+  \bigcap_{A \in\Gamma}(X \setminus A)$ and that if 
+  $a \in (\bigcup_{A \in \Gamma} A )$, we
+  have that  $a\in (\bigcup_{A \in \Gamma} A ) \cup \bigcap_{A
+    \in\Gamma}(X \setminus A)$, and as 
+  $(\bigcup_{A \in \Gamma} A ) \cup \bigcap_{A\in\Gamma}
+  (X \setminus A) \subset X$, and $a$ was arbitrary, we have that 
+  $(\bigcup_{A \in \Gamma} A ) \cup 
+  \bigcap_{A\in\Gamma}(X \setminus A) = X$
+
+  We now will show that $(\bigcap_{A \in \Gamma} A ) \cup
+  \bigcup_{A \in\Gamma}(X \setminus A) =X$.
+  Let 
+  $x \in (\bigcap_{A \in \Gamma} A ) \cup
+  \bigcup_{A \in\Gamma}(X \setminus A)$. We see as each $A$ is a
+  subset of $X$, and $X\setminus A \subset X$, that $x\in X$, and thus 
+  $(\bigcap_{A \in \Gamma} A ) \cup
+  \bigcup_{A \in\Gamma}(X \setminus A) \subset X$. We now let $a \in
+  X$ be arbitrary. We see that if $a \notin(\bigcap_{A \in \Gamma} A
+  )$, that for at least one $A$, $a\notin A$, and thus for some $A$,
+  $a \in (X \setminus A)$, and thus $a \in \bigcup_{A \in\Gamma}(X
+  \setminus A) $, and thus $a \in (\bigcap_{A \in \Gamma} A ) \cup
+  \bigcup_{A \in\Gamma}(X \setminus A)$. We also see that if 
+  $a \in(\bigcap_{A \in \Gamma} A)$, that $a \in (\bigcap_{A \in \Gamma} A ) \cup
+  \bigcup_{A \in\Gamma}(X \setminus A)$. We thus have that as $(\bigcap_{A \in \Gamma} A ) \cup
+  \bigcup_{A \in\Gamma}(X \setminus A) \subset X$, and $a$ was
+  arbitrary, we have that 
+  $(\bigcap_{A \in \Gamma} A ) \cup \bigcup_{A \in\Gamma}(X \setminus A) = X$
+
+  We now see that $(\bigcup_{A \in \Gamma} A ) \cup
+  \bigcap_{A \in\Gamma}(X \setminus A) = X$, and 
+  $(\bigcap_{A \in \Gamma} A ) \cup
+  \bigcup_{A \in\Gamma}(X \setminus A) =X$, and thus 
+  $(\bigcup_{A \in \Gamma} A ) \cup
+  \bigcap_{A \in\Gamma}(X \setminus A) =
+  (\bigcap_{A \in \Gamma} A ) \cup
+  \bigcup_{A \in\Gamma}(X \setminus A)$ and we have found such a formulation.
+
+\end{proof}
+
